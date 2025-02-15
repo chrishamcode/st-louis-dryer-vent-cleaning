@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <!-- Shop Vac -->
-  <g id="shop-vac">
-    <circle fill="#2B2B2B" cx="300" cy="400" r="50"/>
-    <rect fill="#2B2B2B" x="270" y="300" width="60" height="100"/>
-    <path fill="#444444" d="M270,300 C270,280 330,280 330,300" />
-  </g>
-  
-  <!-- Dryer Vent and Hose -->
-  <g id="vent-system">
-    <path fill="#666666" d="M350,250 C400,250 450,300 500,300" stroke="#444444" stroke-width="20"/>
-    <rect fill="#888888" x="500" y="270" width="60" height="60" rx="10"/>
-  </g>
-  
-  <!-- Cleaning Equipment -->
-  <g id="cleaning-tools">
-    <!-- Flexible Rod -->
-    <path fill="none" stroke="#666666" stroke-width="10" d="M300,350 C350,350 400,300 450,300"/>
-    <!-- Brush Head -->
-    <circle fill="#444444" cx="450" cy="300" r="15"/>
-  </g>
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
   <!-- Background -->
-  <rect fill="#F5F5F5" x="0" y="0" width="800" height="600" style="z-index:-1"/>
-  <rect fill="#E0E0E0" x="200" y="0" width="400" height="600" style="z-index:-1"/>
+  <rect width="1200" height="800" fill="#f5f5f5"/>
+
+  <!-- Wall Section -->
+  <rect x="700" y="100" width="400" height="600" fill="#e0e0e0"/>
+
+  <!-- Shop Vac -->
+  <g transform="translate(300,500)">
+    <!-- Base -->
+    <path d="M-80 0 L80 0 L100 200 L-100 200 Z" fill="#2B2B2B"/>
+    <!-- Drum -->
+    <circle cx="0" cy="100" r="100" fill="#2B2B2B"/>
+    <!-- Handle -->
+    <rect x="-60" y="-30" width="120" height="20" fill="#444444"/>
+    <!-- Wheels -->
+    <circle cx="-70" cy="190" r="20" fill="#666666"/>
+    <circle cx="70" cy="190" r="20" fill="#666666"/>
+  </g>
+
+  <!-- Vacuum Hose -->
+  <path d="M300 500 Q500 450 700 500 Q900 550 1000 500" 
+        stroke="#333333" stroke-width="40" fill="none" 
+        stroke-linecap="round"/>
+
+  <!-- Dryer Vent -->
+  <g transform="translate(900,500)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#666666" rx="10"/>
+    <circle cx="0" cy="0" r="30" fill="#444444"/>
+  </g>
+
+  <!-- Additional Equipment -->
+  <g transform="translate(500,300)">
+    <!-- Cleaning rods -->
+    <rect x="-200" y="-10" width="400" height="20" fill="#666666"/>
+    <!-- Brush heads -->
+    <circle cx="200" cy="0" r="15" fill="#444444"/>
+    <circle cx="-200" cy="0" r="15" fill="#444444"/>
+  </g>
 </svg>
