@@ -12,9 +12,9 @@ export default function Home() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div className="flex flex-col space-y-6">
+              <h2 className="text-3xl font-bold">Why Choose Us?</h2>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="mr-2 text-primary">•</span>
@@ -34,7 +34,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="relative">
               <img
                 src="https://placehold.co/800x400/e2e8f0/1e293b?text=Professional+Equipment"
                 alt="Professional dryer vent cleaning equipment"

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative bg-primary">
       <div className="container mx-auto px-4 py-16 sm:py-24">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-12 md:grid-cols-2 items-center">
           <div className="flex flex-col justify-center text-white">
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
               Professional Dryer Vent Cleaning in St. Louis
@@ -23,7 +23,7 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="relative hidden md:block">
             <img
               src="https://placehold.co/800x400/e2e8f0/1e293b?text=Dryer+Vent+Cleaning"
               alt="Professional dryer vent cleaning service"
