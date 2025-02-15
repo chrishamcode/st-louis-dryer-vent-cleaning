@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Hero />
       <Services />
-      
+
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2">
@@ -36,8 +36,8 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1421940943431-d392fcc1079f"
-                alt="Professional dryer vent cleaning service"
+                src="/images/dryer-vent-cleaning-process.jpg"
+                alt="Technician using professional equipment to clean dryer vent"
                 className="rounded-lg object-cover"
               />
             </div>
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       <TestimonialSection />
-      
+
       <section className="bg-gray-50 py-16" id="contact-form">
         <div className="container mx-auto px-4">
           <Card className="mx-auto max-w-2xl p-6">

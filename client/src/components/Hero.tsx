@@ -23,11 +23,11 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          
+
           <div className="hidden md:block">
             <img
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
-              alt="Professional dryer vent cleaning"
+              src="/images/dryer-vent-cleaning-service.jpg"
+              alt="Professional technician cleaning a dryer vent with specialized equipment"
               className="rounded-lg object-cover shadow-xl"
             />
           </div>

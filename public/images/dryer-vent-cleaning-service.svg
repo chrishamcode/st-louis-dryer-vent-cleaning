@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Professional Technician -->
+  <g id="technician">
+    <path fill="#2B3F6B" d="M350,200 c0,0 -20,50 0,100 c20,50 40,60 60,60 c20,0 40,-10 60,-60 c20,-50 0,-100 0,-100" />
+    <circle fill="#FFD6B1" cx="410" cy="170" r="30"/>
+    <!-- Safety Equipment -->
+    <rect fill="#FFFFFF" x="390" y="160" width="40" height="15" rx="5"/>
+  </g>
+  
+  <!-- Dryer Vent Equipment -->
+  <g id="equipment">
+    <!-- Cleaning Rod -->
+    <path fill="#666666" d="M300,250 L600,250 L600,260 L300,260 Z"/>
+    <!-- Rod Brush -->
+    <circle fill="#444444" cx="590" cy="255" r="15"/>
+    <!-- Dryer Vent Opening -->
+    <rect fill="#888888" x="250" y="200" width="60" height="100" rx="10"/>
+  </g>
+  
+  <!-- Background Elements -->
+  <rect fill="#F5F5F5" x="0" y="0" width="800" height="600"/>
+  <rect fill="#E0E0E0" x="200" y="0" width="400" height="600"/>
+</svg>

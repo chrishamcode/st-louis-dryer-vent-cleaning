@@ -35,13 +35,13 @@ export default function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content="St. Louis Dryer Vent Cleaning" />
-      <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+      <meta property="og:image" content="/images/dryer-vent-cleaning-service.jpg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+      <meta name="twitter:image" content="/images/dryer-vent-cleaning-service.jpg" />
 
       {/* Additional SEO Tags */}
       <meta name="geo.region" content="US-MO" />
@@ -62,7 +62,7 @@ export default function SEO({
           "provider": {
             "@type": "LocalBusiness",
             "name": "St. Louis Dryer Vent Cleaning",
-            "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
+            "image": "/images/dryer-vent-cleaning-service.jpg",
             "telephone": "+1-314-555-0123",
             "priceRange": "$$"
           },
