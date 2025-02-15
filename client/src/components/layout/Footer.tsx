@@ -32,42 +32,59 @@ export default function Footer() {
             <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-600">
               <div>
                 <strong className="block mb-1">Counties:</strong>
-                <span>St. Louis County</span><br />
-                <span>St. Charles County</span><br />
-                <span>St. Louis City</span><br />
-                <span>St. Clair County</span><br />
-                <span>Madison County</span>
+                <div className="mb-2">
+                  <strong className="text-xs text-gray-500">Missouri:</strong><br />
+                  <span>St. Louis County</span><br />
+                  <span>St. Charles County</span><br />
+                  <span>St. Louis City</span>
+                </div>
+                <div>
+                  <strong className="text-xs text-gray-500">Illinois:</strong><br />
+                  <span>St. Clair County</span><br />
+                  <span>Madison County</span>
+                </div>
               </div>
               <div>
                 <strong className="block mb-1">Cities Served:</strong>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                  <span>St. Louis</span>
-                  <span>Clayton</span>
-                  <span>Maplewood</span>
-                  <span>Brentwood</span>
-                  <span>Kirkwood</span>
-                  <span>Webster Groves</span>
-                  <span>Richmond Heights</span>
-                  <span>Maryland Heights</span>
-                  <span>University City</span>
-                  <span>Chesterfield</span>
-                  <span>Ladue</span>
-                  <span>Afton</span>
-                  <span>Crestwood</span>
-                  <span>Ballwin</span>
-                  <span>Wildwood</span>
-                  <span>Ferguson</span>
-                  <span>Florissant</span>
-                  <span>Belleville</span>
-                  <span>Fairview Heights</span>
-                  <span>Swansea</span>
-                  <span>O'Fallon</span>
-                  <span>Glen Carbon</span>
-                  <span>Maryville</span>
-                  <span>Edwardsville</span>
-                  <span>Collinsville</span>
-                  <span>Alton</span>
-                  <span>East St. Louis</span>
+                <div className="grid grid-cols-1 gap-y-4">
+                  <div>
+                    <strong className="text-xs text-gray-500 block mb-1">Missouri:</strong>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                      <span>St. Louis</span>
+                      <span>Clayton</span>
+                      <span>Maplewood</span>
+                      <span>Brentwood</span>
+                      <span>Kirkwood</span>
+                      <span>Webster Groves</span>
+                      <span>Richmond Heights</span>
+                      <span>Maryland Heights</span>
+                      <span>University City</span>
+                      <span>Chesterfield</span>
+                      <span>Ladue</span>
+                      <span>Afton</span>
+                      <span>Crestwood</span>
+                      <span>Ballwin</span>
+                      <span>Wildwood</span>
+                      <span>Ferguson</span>
+                      <span>Florissant</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong className="text-xs text-gray-500 block mb-1">Illinois:</strong>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                      <span>Belleville</span>
+                      <span>Fairview Heights</span>
+                      <span>Swansea</span>
+                      <span>O'Fallon</span>
+                      <span>Glen Carbon</span>
+                      <span>Maryville</span>
+                      <span>Edwardsville</span>
+                      <span>Collinsville</span>
+                      <span>Alton</span>
+                      <span>East St. Louis</span>
+                      <span>Washington Park</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
