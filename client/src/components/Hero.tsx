@@ -28,7 +28,7 @@ export default function Hero() {
             <img
               src="/images/dryer-vent-cleaning-service.jpg"
               alt="Professional technician cleaning a dryer vent with specialized equipment"
-              className="rounded-lg object-cover shadow-xl"
+              className="rounded-lg object-cover shadow-xl w-full h-[400px]"
             />
           </div>
         </div>

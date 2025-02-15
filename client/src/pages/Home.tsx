@@ -38,7 +38,7 @@ export default function Home() {
               <img
                 src="/images/dryer-vent-cleaning-process.jpg"
                 alt="Technician using professional equipment to clean dryer vent"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover w-full h-[400px]"
               />
             </div>
           </div>
