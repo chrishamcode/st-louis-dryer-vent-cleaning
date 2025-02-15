@@ -11,16 +11,16 @@ interface SEOProps {
 
 const defaultSEO = {
   title: "St. Louis Dryer Vent Cleaning | Professional & Affordable Service",
-  description: "Professional dryer vent cleaning services in St. Louis, MO. Serving St. Louis City, County, St. Clair & Madison Counties. Safe, reliable & affordable.",
+  description: "Professional dryer vent cleaning services in St. Louis, MO. Serving St. Louis City, County, St. Charles, St. Clair & Madison Counties. Safe, reliable & affordable.",
   canonical: "https://stlouisdryerventcleaning.com",
 };
 
-export default function SEO({ 
+export default function SEO({
   title = defaultSEO.title,
   description = defaultSEO.description,
   canonical = defaultSEO.canonical,
   children,
-  breadcrumb = [] 
+  breadcrumb = []
 }: SEOProps) {
   const fullTitle = title === defaultSEO.title ? title : `${title} | St. Louis Dryer Vent Cleaning`;
 
@@ -95,16 +95,40 @@ export default function SEO({
             "openingHours": "Mo-Sa 08:00-18:00",
             "areaServed": [
               {
+                "@type": "County",
+                "name": "St. Louis County",
+                "state": "MO"
+              },
+              {
+                "@type": "County",
+                "name": "St. Charles County",
+                "state": "MO"
+              },
+              {
                 "@type": "City",
                 "name": "St. Louis",
                 "state": "MO"
               },
               {
                 "@type": "County",
-                "name": "St. Louis County",
-                "state": "MO"
+                "name": "St. Clair County",
+                "state": "IL"
+              },
+              {
+                "@type": "County",
+                "name": "Madison County",
+                "state": "IL"
               }
-            ]
+            ],
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 38.6270,
+                "longitude": -90.1994
+              },
+              "geoRadius": "50000"
+            }
           },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
