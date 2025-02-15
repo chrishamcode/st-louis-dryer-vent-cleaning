@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import ServiceAreas from "@/pages/ServiceAreas";
 import Contact from "@/pages/Contact";
+import BookService from "@/pages/BookService";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/service-areas" component={ServiceAreas} />
           <Route path="/contact" component={Contact} />
+          <Route path="/book" component={BookService} />
           <Route component={NotFound} />
         </Switch>
       </main>

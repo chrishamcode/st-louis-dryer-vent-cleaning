@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, Calendar } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -11,8 +11,8 @@ export default function Navbar() {
             St. Louis Dryer Vent Cleaning
           </a>
         </Link>
-        
-        <div className="hidden items-center space-x-8 md:flex">
+
+        <div className="hidden items-center space-x-4 md:flex">
           <Link href="/">
             <a className="text-sm font-medium hover:text-primary">Home</a>
           </Link>
@@ -22,9 +22,19 @@ export default function Navbar() {
           <Link href="/contact">
             <a className="text-sm font-medium hover:text-primary">Contact</a>
           </Link>
-          <Button size="sm">
-            <PhoneCall className="mr-2 h-4 w-4" />
-            <a href="tel:314-555-0123">(314) 555-0123</a>
+          <Button variant="outline" size="sm" asChild>
+            <a href="tel:314-555-0123">
+              <PhoneCall className="mr-2 h-4 w-4" />
+              (314) 555-0123
+            </a>
+          </Button>
+          <Button size="sm" asChild>
+            <Link href="/book">
+              <a>
+                <Calendar className="mr-2 h-4 w-4" />
+                Book Now
+              </a>
+            </Link>
           </Button>
         </div>
       </div>
