@@ -23,7 +23,7 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          <div className="relative hidden md:block">
+          <div className="relative mt-8 md:mt-0">
             <img
               src="https://placehold.co/800x400/e2e8f0/1e293b?text=Dryer+Vent+Cleaning"
               alt="Professional dryer vent cleaning service"
