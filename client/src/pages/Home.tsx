@@ -12,36 +12,25 @@ export default function Home() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-bold">Why Choose Us?</h2>
-              <ul className="mt-6 space-y-4">
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>
-                  <span>Professional, experienced technicians</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>
-                  <span>State-of-the-art cleaning equipment</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>
-                  <span>Competitive pricing with no hidden fees</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>
-                  <span>Flexible scheduling options</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img
-                src="/images/dryer-vent-cleaning-process.jpg"
-                alt="Technician using professional equipment to clean dryer vent"
-                className="rounded-lg object-cover w-full h-[400px]"
-              />
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+          <ul className="space-y-4">
+            <li className="flex items-start">
+              <span className="mr-2 text-primary">•</span>
+              <span>Professional, experienced technicians</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 text-primary">•</span>
+              <span>State-of-the-art cleaning equipment</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 text-primary">•</span>
+              <span>Competitive pricing with no hidden fees</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 text-primary">•</span>
+              <span>Flexible scheduling options</span>
+            </li>
+          </ul>
         </div>
       </section>
 
