@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, MessageSquare } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -14,18 +14,30 @@ export default function Hero() {
               Safe, reliable, and affordable dryer vent cleaning services. Protect your home and family from fire hazards.
             </p>
             <div className="mt-8 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-              <Button size="lg" variant="secondary">
-                <PhoneCall className="mr-2 h-5 w-5" />
-                <a href="tel:314-555-0123">Call (314) 555-0123</a>
+              <Button 
+                size="xl" 
+                variant="secondary" 
+                className="group text-lg font-semibold py-6 px-8 flex items-center justify-center gap-3 hover:scale-105 transition-transform"
+              >
+                <PhoneCall className="h-6 w-6" />
+                <div className="flex flex-col items-start">
+                  <span>Call or Text</span>
+                  <span className="text-base">(314) 555-0123</span>
+                </div>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button 
+                size="xl" 
+                variant="outline" 
+                className="text-lg font-semibold py-6 px-8 hover:bg-white/20" 
+                asChild
+              >
                 <a href="#contact-form">Schedule Service</a>
               </Button>
             </div>
           </div>
           <div className="relative mt-12 md:mt-0">
             <img
-              src="https://placehold.co/800x400/e2e8f0/1e293b?text=Dryer+Vent+Cleaning"
+              src="/images/dryer-vent-cleaning-service.jpg"
               alt="Professional dryer vent cleaning service"
               className="rounded-lg object-cover shadow-xl w-full h-[400px]"
             />
