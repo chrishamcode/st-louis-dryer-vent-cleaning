@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { PhoneCall, MessageSquare } from "lucide-react";
 
 export default function Hero() {
+  // Image for the technician and lint buildup showcase
+  const technicianImage = "/technician-lint-showcase.png";
   return (
     <section className="relative bg-primary overflow-hidden" aria-label="Hero section">
       {/* Background pattern */}
@@ -16,17 +18,30 @@ export default function Hero() {
       
       {/* Hero Content */}
       <div className="container mx-auto px-4 py-16 sm:py-24 relative z-10">
-        {/* Headline */}
-        <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block mb-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white">
-            Trusted Throughout Greater St. Louis
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            {/* Headline */}
+            <div className="text-center lg:text-left mb-10 md:mb-16">
+              <div className="inline-block mb-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white">
+                Trusted Throughout Greater St. Louis
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white mb-4 sm:mb-6">
+                Professional Dryer Vent Cleaning in St. Louis
+              </h1>
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-100 max-w-3xl lg:max-w-none mx-auto lg:mx-0 px-2 lg:px-0">
+                Safe, reliable, and affordable dryer vent cleaning services. Protect your home and family from fire hazards.
+              </p>
+            </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white mb-4 sm:mb-6">
-            Professional Dryer Vent Cleaning in St. Louis
-          </h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-100 max-w-3xl mx-auto px-2">
-            Safe, reliable, and affordable dryer vent cleaning services. Protect your home and family from fire hazards.
-          </p>
+          
+          {/* Technician image showcase */}
+          <div className="flex justify-center lg:justify-end">
+            <img 
+              src={technicianImage} 
+              alt="Professional technician with examples of lint buildup removed from dryer vents" 
+              className="rounded-xl shadow-lg max-w-full h-auto max-h-[400px] object-contain"
+            />
+          </div>
         </div>
         
         {/* Action Buttons */}
