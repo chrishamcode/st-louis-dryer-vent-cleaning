@@ -63,9 +63,9 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0"></div>
               <img
-                src="/images/dryer-vent-cleaning-service.svg"
+                src="/images/dryer-vent-cleaning-service.jpg"
                 alt="Professional technician cleaning a dryer vent in St. Louis"
-                className="relative z-10 w-full h-[400px] object-contain"
+                className="relative z-10 w-full h-[400px] object-cover"
                 width="800"
                 height="400"
                 loading="eager"
