@@ -1,6 +1,30 @@
 import { Link } from "wouter";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Footer() {
+  const [showAllMoCities, setShowAllMoCities] = useState(false);
+  const [showAllIlCities, setShowAllIlCities] = useState(false);
+
+  const moCities = [
+    'Afton', 'Ballwin', 'Black Jack', 'Bridgeton', 'Chesterfield', 'Clayton', 
+    'Concord', 'Creve Coeur', 'Crestwood', 'Earth City', 'Ellisville', 
+    'Ferguson', 'Fenton', 'Florissant', 'Jennings', 'Kirkwood', 'Ladue', 
+    'Lemay', 'Maplewood', 'Maryland Heights', 'Mehlville', 'Richmond Heights', 
+    'St. Louis', 'Town and Country', 'University City', 'Valley Park', 
+    'Webster Groves', 'Wildwood'
+  ];
+
+  const ilCities = [
+    'Alton', 'Belleville', 'Collinsville', 'East St. Louis', 'Edwardsville', 
+    'Fairview Heights', 'Glen Carbon', 'Granite City', 'Highland', 'Lebanon', 
+    'Mascoutah', 'Maryville', 'Millstadt', 'O\'Fallon', 'Roxana', 'Scott AFB', 
+    'Shiloh', 'Swansea', 'Troy', 'Washington Park'
+  ];
+
+  const visibleMoCities = showAllMoCities ? moCities : moCities.slice(0, 8);
+  const visibleIlCities = showAllIlCities ? ilCities : ilCities.slice(0, 8);
+  
   return (
     <footer className="border-t bg-gray-50" aria-label="Site footer">
       <div className="container mx-auto px-4 py-12">
@@ -29,81 +53,89 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-semibold">Service Areas</h4>
-            <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-600">
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
               <div>
                 <strong className="block mb-1">Counties:</strong>
-                <div className="mb-2">
-                  <strong className="text-xs text-gray-500">Missouri:</strong><br />
+                <div className="mb-2 text-xs">
+                  <strong className="text-gray-500">Missouri:</strong><br />
                   <span>St. Louis County</span><br />
                   <span>St. Charles County</span><br />
                   <span>St. Louis City</span>
                 </div>
-                <div>
-                  <strong className="text-xs text-gray-500">Illinois:</strong><br />
+                <div className="text-xs">
+                  <strong className="text-gray-500">Illinois:</strong><br />
                   <span>St. Clair County</span><br />
                   <span>Madison County</span>
                 </div>
               </div>
+              
               <div>
                 <strong className="block mb-1">Cities Served:</strong>
-                <div className="grid grid-cols-1 gap-y-4">
+                <div className="space-y-4">
+                  {/* Missouri Cities */}
                   <div>
-                    <strong className="text-xs text-gray-500 block mb-1">Missouri:</strong>
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                      <span>Afton</span>
-                      <span>Ballwin</span>
-                      <span>Black Jack</span>
-                      <span>Bridgeton</span>
-                      <span>Chesterfield</span>
-                      <span>Clayton</span>
-                      <span>Concord</span>
-                      <span>Creve Coeur</span>
-                      <span>Crestwood</span>
-                      <span>Earth City</span>
-                      <span>Ellisville</span>
-                      <span>Ferguson</span>
-                      <span>Fenton</span>
-                      <span>Florissant</span>
-                      <span>Jennings</span>
-                      <span>Kirkwood</span>
-                      <span>Ladue</span>
-                      <span>Lemay</span>
-                      <span>Maplewood</span>
-                      <span>Maryland Heights</span>
-                      <span>Mehlville</span>
-                      <span>Richmond Heights</span>
-                      <span>St. Louis</span>
-                      <span>Town and Country</span>
-                      <span>University City</span>
-                      <span>Valley Park</span>
-                      <span>Webster Groves</span>
-                      <span>Wildwood</span>
+                    <div className="flex items-center justify-between">
+                      <strong className="text-xs text-gray-500">Missouri:</strong>
+                      <button 
+                        onClick={() => setShowAllMoCities(!showAllMoCities)}
+                        className="text-xs text-primary flex items-center"
+                        aria-label={showAllMoCities ? "Show fewer Missouri cities" : "Show all Missouri cities"}
+                      >
+                        {showAllMoCities ? (
+                          <>Less <ChevronUp className="h-3 w-3 ml-1" /></>
+                        ) : (
+                          <>More <ChevronDown className="h-3 w-3 ml-1" /></>
+                        )}
+                      </button>
                     </div>
+                    
+                    <div className="mt-1 text-xs grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                      {visibleMoCities.map((city, index) => (
+                        <span key={index} className="truncate">{city}</span>
+                      ))}
+                    </div>
+                    
+                    {showAllMoCities && (
+                      <Link 
+                        href="/service-areas" 
+                        className="text-xs text-primary hover:underline mt-1 inline-block"
+                      >
+                        View all Missouri service areas
+                      </Link>
+                    )}
                   </div>
+                  
+                  {/* Illinois Cities */}
                   <div>
-                    <strong className="text-xs text-gray-500 block mb-1">Illinois:</strong>
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                      <span>Alton</span>
-                      <span>Belleville</span>
-                      <span>Collinsville</span>
-                      <span>East St. Louis</span>
-                      <span>Edwardsville</span>
-                      <span>Fairview Heights</span>
-                      <span>Glen Carbon</span>
-                      <span>Granite City</span>
-                      <span>Highland</span>
-                      <span>Lebanon</span>
-                      <span>Mascoutah</span>
-                      <span>Maryville</span>
-                      <span>Millstadt</span>
-                      <span>O'Fallon</span>
-                      <span>Roxana</span>
-                      <span>Scott AFB</span>
-                      <span>Shiloh</span>
-                      <span>Swansea</span>
-                      <span>Troy</span>
-                      <span>Washington Park</span>
+                    <div className="flex items-center justify-between">
+                      <strong className="text-xs text-gray-500">Illinois:</strong>
+                      <button 
+                        onClick={() => setShowAllIlCities(!showAllIlCities)}
+                        className="text-xs text-primary flex items-center"
+                        aria-label={showAllIlCities ? "Show fewer Illinois cities" : "Show all Illinois cities"}
+                      >
+                        {showAllIlCities ? (
+                          <>Less <ChevronUp className="h-3 w-3 ml-1" /></>
+                        ) : (
+                          <>More <ChevronDown className="h-3 w-3 ml-1" /></>
+                        )}
+                      </button>
                     </div>
+                    
+                    <div className="mt-1 text-xs grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                      {visibleIlCities.map((city, index) => (
+                        <span key={index} className="truncate">{city}</span>
+                      ))}
+                    </div>
+                    
+                    {showAllIlCities && (
+                      <Link 
+                        href="/service-areas" 
+                        className="text-xs text-primary hover:underline mt-1 inline-block"
+                      >
+                        View all Illinois service areas
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
