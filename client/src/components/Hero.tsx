@@ -62,15 +62,38 @@ export default function Hero() {
           <div className="relative mt-12 md:mt-0">
             <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0"></div>
-              <img
-                src="/images/dryer-vent-cleaning-process.jpg"
-                alt="Professional dryer vent cleaning process in St. Louis"
-                className="relative z-10 w-full h-[400px] object-cover"
-                width="800"
-                height="400"
-                loading="eager"
-                decoding="async"
-              />
+              
+              {/* Alternative to image */}
+              <div className="relative z-10 w-full h-[400px] flex items-center justify-center bg-gray-100">
+                <div className="grid grid-cols-2 gap-4 p-6 w-full h-full">
+                  {/* Professional technician */}
+                  <div className="flex flex-col justify-center items-center">
+                    <div className="w-24 h-24 rounded-full bg-primary mb-4 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-800">Professional Service</h3>
+                    <p className="text-sm text-center text-gray-600 mt-2">Our trained technicians provide expert dryer vent cleaning</p>
+                  </div>
+                  
+                  {/* Lint accumulation illustration */}
+                  <div className="grid grid-rows-2 gap-4">
+                    <div className="bg-gray-200 rounded-lg p-4 flex items-center justify-center relative">
+                      <div className="absolute inset-0 m-4 bg-gray-300 rounded opacity-80"></div>
+                      <p className="text-sm font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
+                    </div>
+                    <div className="bg-gray-200 rounded-lg p-4 flex items-center justify-center">
+                      <div className="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <p className="text-sm font-medium text-gray-800">Prevent Fire Hazards</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
               {/* Service badge */}
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-sm font-medium text-gray-700 shadow-md">
@@ -82,7 +105,7 @@ export default function Hero() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Real Results Shown
+                Proven Results
               </div>
               
               {/* Fire safety badge */}
