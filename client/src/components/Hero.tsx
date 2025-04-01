@@ -17,14 +17,14 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="container mx-auto px-4 py-16 sm:py-24 relative z-10">
         {/* Headline */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-block mb-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white">
             Trusted Throughout Greater St. Louis
           </div>
-          <h1 className="text-4xl font-bold leading-tight sm:text-5xl text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white mb-4 sm:mb-6">
             Professional Dryer Vent Cleaning in St. Louis
           </h1>
-          <p className="mt-4 text-lg text-gray-100 max-w-3xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-100 max-w-3xl mx-auto px-2">
             Safe, reliable, and affordable dryer vent cleaning services. Protect your home and family from fire hazards.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
         
         {/* Service Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-4 md:gap-6">
           {/* Feature 1: Professional Service */}
           <div className="bg-white rounded-xl overflow-hidden shadow-lg">
             <div className="flex flex-col items-center p-6 text-center">

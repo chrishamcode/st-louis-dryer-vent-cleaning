@@ -56,7 +56,7 @@ export default function StClairCounty() {
 
         <h1 className="mb-8 text-3xl md:text-4xl font-bold">Dryer Vent Cleaning in St. Clair County, Illinois</h1>
         
-        <div className="grid gap-12 md:grid-cols-3 mb-12">
+        <div className="grid gap-8 md:gap-12 grid-cols-1 md:grid-cols-3 mb-12">
           <div className="md:col-span-2">
             <div className="prose prose-lg max-w-none mb-8">
               <p>
@@ -74,7 +74,7 @@ export default function StClairCounty() {
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">Cities We Serve in St. Clair County</h2>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 my-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 my-6">
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 text-primary mr-2" />
                   <span>East St. Louis</span>

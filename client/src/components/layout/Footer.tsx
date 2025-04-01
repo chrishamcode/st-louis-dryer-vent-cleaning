@@ -30,8 +30,8 @@ export default function Footer() {
   
   return (
     <footer className="border-t bg-gray-50" aria-label="Site footer">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-lg font-semibold">St. Louis Dryer Vent Cleaning</h3>
             <p className="mt-2 text-sm text-gray-600">
@@ -56,7 +56,7 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-semibold">Service Areas</h4>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-2 text-sm text-gray-600">
               <div>
                 <strong className="block mb-1">Counties:</strong>
                 <div className="mb-2 text-xs">
@@ -92,7 +92,7 @@ export default function Footer() {
                       </button>
                     </div>
                     
-                    <div className="mt-1 text-xs grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                    <div className="mt-1 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
                       {visibleMoCities.map((city, index) => (
                         <span key={index} className="truncate">{city}</span>
                       ))}
@@ -125,7 +125,7 @@ export default function Footer() {
                       </button>
                     </div>
                     
-                    <div className="mt-1 text-xs grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                    <div className="mt-1 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
                       {visibleIlCities.map((city, index) => (
                         <span key={index} className="truncate">{city}</span>
                       ))}
