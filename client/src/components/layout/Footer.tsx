@@ -6,20 +6,23 @@ export default function Footer() {
   const [showAllMoCities, setShowAllMoCities] = useState(false);
   const [showAllIlCities, setShowAllIlCities] = useState(false);
 
+  // Cities organized by population size and projected user base
+  // (larger cities and those with higher expected service demand are listed first)
   const moCities = [
-    'Afton', 'Ballwin', 'Black Jack', 'Bridgeton', 'Chesterfield', 'Clayton', 
-    'Concord', 'Creve Coeur', 'Crestwood', 'Earth City', 'Ellisville', 
-    'Ferguson', 'Fenton', 'Florissant', 'Jennings', 'Kirkwood', 'Ladue', 
-    'Lemay', 'Maplewood', 'Maryland Heights', 'Mehlville', 'Richmond Heights', 
-    'St. Louis', 'Town and Country', 'University City', 'Valley Park', 
-    'Webster Groves', 'Wildwood'
+    'St. Louis', 'Florissant', 'Chesterfield', 'University City', 'Kirkwood',
+    'Maryland Heights', 'Wildwood', 'Ferguson', 'Ballwin', 'Clayton',
+    'Webster Groves', 'Creve Coeur', 'Maplewood', 'Richmond Heights', 'Fenton',
+    'Town and Country', 'Bridgeton', 'Mehlville', 'Ladue', 'Crestwood',
+    'Jennings', 'Ellisville', 'Lemay', 'Valley Park', 'Afton',
+    'Black Jack', 'Earth City', 'Concord'
   ];
 
+  // Illinois cities by population and projected user base
   const ilCities = [
-    'Alton', 'Belleville', 'Collinsville', 'East St. Louis', 'Edwardsville', 
-    'Fairview Heights', 'Glen Carbon', 'Granite City', 'Highland', 'Lebanon', 
-    'Mascoutah', 'Maryville', 'Millstadt', 'O\'Fallon', 'Roxana', 'Scott AFB', 
-    'Shiloh', 'Swansea', 'Troy', 'Washington Park'
+    'East St. Louis', 'Belleville', 'Granite City', 'Alton', 'O\'Fallon', 
+    'Edwardsville', 'Collinsville', 'Fairview Heights', 'Swansea', 'Highland',
+    'Glen Carbon', 'Maryville', 'Shiloh', 'Scott AFB', 'Washington Park',
+    'Mascoutah', 'Troy', 'Millstadt', 'Lebanon', 'Roxana'
   ];
 
   const visibleMoCities = showAllMoCities ? moCities : moCities.slice(0, 8);

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { AlertCircle, MapPin, CheckCircle } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { AlertCircle, MapPin, CheckCircle, Users } from "lucide-react";
 import { useGeolocation, calculateDistance, serviceAreaCoordinates, zipToAreaMapping } from "@/hooks/use-geolocation";
 import ContactForm from "@/components/ContactForm";
 import { ServiceAreasSEO } from "@/lib/seo";
@@ -13,36 +14,42 @@ export default function ServiceAreas() {
   const [nearbyAreas, setNearbyAreas] = useState<string[]>([]);
   const [showLocationPrompt, setShowLocationPrompt] = useState<boolean>(true);
   
+  // Areas arranged by population size and service demand
   const areas = [
     {
       name: "St. Louis City",
-      description: "Complete coverage throughout St. Louis City",
+      description: "Complete coverage throughout St. Louis City, our primary service area",
       zips: ["63101", "63102", "63103", "63104"],
-      state: "MO"
+      state: "MO",
+      population: 293310
     },
     {
       name: "St. Louis County",
-      description: "Serving all major communities in St. Louis County",
+      description: "Comprehensive service across all St. Louis County communities",
       zips: ["63121", "63122", "63123", "63124"],
-      state: "MO"
+      state: "MO",
+      population: 996945
     },
     {
       name: "St. Charles County",
-      description: "Full service throughout St. Charles County",
+      description: "Full service throughout rapidly growing St. Charles County",
       zips: ["63301", "63303", "63304", "63366"],
-      state: "MO"
-    },
-    {
-      name: "St. Clair County",
-      description: "Available throughout St. Clair County, IL",
-      zips: ["62201", "62202", "62203", "62204"],
-      state: "IL"
+      state: "MO",
+      population: 402022
     },
     {
       name: "Madison County",
-      description: "Serving Madison County, IL residents",
+      description: "Serving Madison County, IL residents with reliable service",
       zips: ["62001", "62002", "62003", "62004"],
-      state: "IL"
+      state: "IL",
+      population: 264776
+    },
+    {
+      name: "St. Clair County",
+      description: "Available throughout St. Clair County, IL communities",
+      zips: ["62201", "62202", "62203", "62204"],
+      state: "IL",
+      population: 257400
     },
   ];
 
@@ -198,9 +205,26 @@ export default function ServiceAreas() {
                     </div>
                   </div>
                   <p className="mb-4 text-gray-600">{area.description}</p>
-                  <div className="text-sm text-gray-500">
-                    <p className="font-medium">Service ZIP Codes:</p>
-                    <p>{area.zips.join(", ")}</p>
+                  <div className="space-y-3">
+                    <div className="text-sm text-gray-500">
+                      <p className="font-medium">Service ZIP Codes:</p>
+                      <p>{area.zips.join(", ")}</p>
+                    </div>
+                    
+                    <div className="mt-3">
+                      <div className="flex items-center justify-between text-xs mb-1">
+                        <div className="flex items-center">
+                          <Users className="h-3 w-3 mr-1" />
+                          <span className="text-gray-600">Population Size</span>
+                        </div>
+                        <span className="font-medium">{area.population.toLocaleString()}</span>
+                      </div>
+                      <Progress 
+                        value={(area.population / 1000000) * 100} 
+                        className="h-1.5" 
+                        aria-label={`Population size: ${area.population.toLocaleString()}`}
+                      />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
