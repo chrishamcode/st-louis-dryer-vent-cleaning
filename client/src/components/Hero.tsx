@@ -47,7 +47,7 @@ export default function Hero() {
               <Button 
                 size="lg"
                 variant="outline" 
-                className="text-lg font-semibold py-6 px-8 hover:bg-white/20" 
+                className="text-lg font-semibold py-6 px-8 hover:bg-white/20 z-20" 
                 asChild
               >
                 <a 
@@ -65,30 +65,30 @@ export default function Hero() {
               
               {/* Alternative to image */}
               <div className="relative z-10 w-full h-[400px] flex items-center justify-center bg-gray-100">
-                <div className="grid grid-cols-2 gap-4 p-6 w-full h-full">
+                <div className="grid grid-cols-2 gap-6 p-8 w-full h-full">
                   {/* Professional technician */}
-                  <div className="flex flex-col justify-center items-center">
-                    <div className="w-24 h-24 rounded-full bg-primary mb-4 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="flex flex-col justify-center items-center mt-4">
+                    <div className="w-20 h-20 rounded-full bg-primary mb-3 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-800">Professional Service</h3>
-                    <p className="text-sm text-center text-gray-600 mt-2">Our trained technicians provide expert dryer vent cleaning</p>
+                    <h3 className="text-base font-bold text-gray-800">Professional Service</h3>
+                    <p className="text-xs text-center text-gray-600 mt-1">Our trained technicians provide expert dryer vent cleaning</p>
                   </div>
                   
                   {/* Lint accumulation illustration */}
-                  <div className="grid grid-rows-2 gap-4">
-                    <div className="bg-gray-200 rounded-lg p-4 flex items-center justify-center relative">
-                      <div className="absolute inset-0 m-4 bg-gray-300 rounded opacity-80"></div>
-                      <p className="text-sm font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
+                  <div className="grid grid-rows-2 gap-4 mt-4">
+                    <div className="bg-gray-200 rounded-lg p-3 flex items-center justify-center relative">
+                      <div className="absolute inset-0 m-3 bg-gray-300 rounded opacity-80"></div>
+                      <p className="text-xs font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
                     </div>
-                    <div className="bg-gray-200 rounded-lg p-4 flex items-center justify-center">
+                    <div className="bg-gray-200 rounded-lg p-3 flex items-center justify-center">
                       <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
-                        <p className="text-sm font-medium text-gray-800">Prevent Fire Hazards</p>
+                        <p className="text-xs font-medium text-gray-800">Prevent Fire Hazards</p>
                       </div>
                     </div>
                   </div>
