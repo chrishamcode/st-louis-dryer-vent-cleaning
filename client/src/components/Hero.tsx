@@ -83,34 +83,35 @@ export default function Hero() {
           {/* Feature 1: Professional Service */}
           <div className="bg-white rounded-xl overflow-hidden shadow-lg">
             <div className="flex flex-col items-center p-6 text-center">
-              <div className="w-20 h-20 rounded-full bg-primary mb-4 flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full bg-primary mb-6 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-800">Professional Service</h3>
-              <p className="text-sm text-gray-600 mt-2">Our trained technicians provide expert dryer vent cleaning</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Professional Service</h3>
+              <p className="text-gray-600">Our trained technicians provide expert dryer vent cleaning</p>
             </div>
           </div>
           
           {/* Feature 2: Dangerous Lint */}
           <div className="bg-white rounded-xl overflow-hidden shadow-lg">
             <div className="flex flex-col p-6">
-              <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center relative mb-4 h-20">
-                <div className="absolute inset-0 m-3 bg-gray-200 rounded opacity-80"></div>
-                <p className="text-sm font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
+              <div className="bg-gray-100 rounded-lg p-4 flex items-center mb-4">
+                <p className="text-gray-800 font-medium">Dangerous Lint Buildup</p>
               </div>
-              <div className="flex items-center bg-gray-100 rounded-lg p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              
+              <div className="bg-gray-100 rounded-lg p-4 flex items-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <p className="text-sm font-medium text-gray-800">Prevent Fire Hazards</p>
+                <p className="text-gray-800 font-medium">Prevent Fire Hazards</p>
               </div>
-              <div className="mt-4 flex items-center text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+              
+              <div className="flex items-center mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-primary" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-medium">Proven Results</span>
+                <span className="font-medium text-gray-800">Proven Results</span>
               </div>
             </div>
           </div>
@@ -118,16 +119,16 @@ export default function Hero() {
           {/* Feature 3: Satisfaction Guaranteed */}
           <div className="bg-white rounded-xl overflow-hidden shadow-lg">
             <div className="flex flex-col p-6">
-              <div className="bg-red-50 text-red-800 px-4 py-3 rounded-lg text-sm font-semibold flex items-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <div className="bg-red-50 text-red-800 px-4 py-3 rounded-lg font-medium mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05c-.867 1.83-1.117 3.49-.728 4.866.387 1.37 1.333 2.512 2.734 3.217.68.34 1.446.545 2.234.612.81.07 1.63.04 2.432-.085 1.587-.247 3.22-1.03 4.372-2.422 1.152-1.392 1.864-3.258 1.756-5.576-.097-1.92-.78-3.313-1.78-4.244-.998-.932-2.302-1.394-3.528-1.515-1.23-.123-2.355.073-3.147.65z" clipRule="evenodd" />
                 </svg>
                 Prevents Home Fires
               </div>
-              <div className="flex-1 flex flex-col justify-center items-center text-center mt-4">
-                <h3 className="text-lg font-bold text-gray-800">100% Satisfaction</h3>
-                <p className="text-sm text-gray-600 mt-2">Guaranteed service quality or your money back</p>
-                <div className="mt-4 text-primary font-semibold text-sm">
+              <div className="flex-1 flex flex-col justify-center items-center text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">100% Satisfaction</h3>
+                <p className="text-gray-600 mb-4">Guaranteed service quality or your money back</p>
+                <div className="text-primary font-medium">
                   Trusted by homeowners in St. Louis since 2015
                 </div>
               </div>
