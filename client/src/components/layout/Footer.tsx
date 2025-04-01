@@ -50,38 +50,58 @@ export default function Footer() {
                   <div>
                     <strong className="text-xs text-gray-500 block mb-1">Missouri:</strong>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                      <span>St. Louis</span>
-                      <span>Clayton</span>
-                      <span>Maplewood</span>
-                      <span>Brentwood</span>
-                      <span>Kirkwood</span>
-                      <span>Webster Groves</span>
-                      <span>Richmond Heights</span>
-                      <span>Maryland Heights</span>
-                      <span>University City</span>
-                      <span>Chesterfield</span>
-                      <span>Ladue</span>
                       <span>Afton</span>
-                      <span>Crestwood</span>
                       <span>Ballwin</span>
-                      <span>Wildwood</span>
+                      <span>Black Jack</span>
+                      <span>Bridgeton</span>
+                      <span>Chesterfield</span>
+                      <span>Clayton</span>
+                      <span>Concord</span>
+                      <span>Creve Coeur</span>
+                      <span>Crestwood</span>
+                      <span>Earth City</span>
+                      <span>Ellisville</span>
                       <span>Ferguson</span>
+                      <span>Fenton</span>
                       <span>Florissant</span>
+                      <span>Jennings</span>
+                      <span>Kirkwood</span>
+                      <span>Ladue</span>
+                      <span>Lemay</span>
+                      <span>Maplewood</span>
+                      <span>Maryland Heights</span>
+                      <span>Mehlville</span>
+                      <span>Richmond Heights</span>
+                      <span>St. Louis</span>
+                      <span>Town and Country</span>
+                      <span>University City</span>
+                      <span>Valley Park</span>
+                      <span>Webster Groves</span>
+                      <span>Wildwood</span>
                     </div>
                   </div>
                   <div>
                     <strong className="text-xs text-gray-500 block mb-1">Illinois:</strong>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                      <span>Belleville</span>
-                      <span>Fairview Heights</span>
-                      <span>Swansea</span>
-                      <span>O'Fallon</span>
-                      <span>Glen Carbon</span>
-                      <span>Maryville</span>
-                      <span>Edwardsville</span>
-                      <span>Collinsville</span>
                       <span>Alton</span>
+                      <span>Belleville</span>
+                      <span>Collinsville</span>
                       <span>East St. Louis</span>
+                      <span>Edwardsville</span>
+                      <span>Fairview Heights</span>
+                      <span>Glen Carbon</span>
+                      <span>Granite City</span>
+                      <span>Highland</span>
+                      <span>Lebanon</span>
+                      <span>Mascoutah</span>
+                      <span>Maryville</span>
+                      <span>Millstadt</span>
+                      <span>O'Fallon</span>
+                      <span>Roxana</span>
+                      <span>Scott AFB</span>
+                      <span>Shiloh</span>
+                      <span>Swansea</span>
+                      <span>Troy</span>
                       <span>Washington Park</span>
                     </div>
                   </div>
