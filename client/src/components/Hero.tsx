@@ -16,6 +16,7 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 py-16 sm:py-24 relative z-10">
         <div className="grid gap-12 md:grid-cols-2 items-center">
+          {/* Left Column - Text Content */}
           <div className="flex flex-col justify-center text-white">
             <div className="inline-block mb-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
               Trusted Throughout Greater St. Louis
@@ -47,7 +48,7 @@ export default function Hero() {
               <Button 
                 size="lg"
                 variant="outline" 
-                className="text-lg font-semibold py-6 px-8 hover:bg-white/20 z-20" 
+                className="text-lg font-semibold py-6 px-8 hover:bg-white/20" 
                 asChild
               >
                 <a 
@@ -59,53 +60,56 @@ export default function Hero() {
               </Button>
             </div>
           </div>
+          
+          {/* Right Column - Visual Content */}
           <div className="relative mt-12 md:mt-0">
             <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0"></div>
               
-              {/* Alternative to image */}
+              {/* Visual Content */}
               <div className="relative z-10 w-full h-[400px] flex items-center justify-center bg-gray-100">
-                <div className="grid grid-cols-2 gap-6 p-8 w-full h-full">
-                  {/* Professional technician */}
-                  <div className="flex flex-col justify-center items-center mt-4">
-                    <div className="w-20 h-20 rounded-full bg-primary mb-3 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">Professional Service</h3>
-                    <p className="text-xs text-center text-gray-600 mt-1">Our trained technicians provide expert dryer vent cleaning</p>
-                  </div>
-                  
-                  {/* Lint accumulation illustration */}
-                  <div className="grid grid-rows-2 gap-4 mt-4">
-                    <div className="bg-gray-200 rounded-lg p-3 flex items-center justify-center relative">
-                      <div className="absolute inset-0 m-3 bg-gray-300 rounded opacity-80"></div>
-                      <p className="text-xs font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
-                    </div>
-                    <div className="bg-gray-200 rounded-lg p-3 flex items-center justify-center">
-                      <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex flex-col w-full h-full">
+                  {/* Top section: Two column layout */}
+                  <div className="grid grid-cols-2 h-[300px]">
+                    {/* Left cell: Lint illustration */}
+                    <div className="flex flex-col justify-center items-center p-6 border-r border-gray-200">
+                      <div className="bg-gray-200 rounded-lg p-4 flex items-center justify-center relative w-full max-w-[160px] h-[120px]">
+                        <div className="absolute inset-0 m-4 bg-gray-300 rounded opacity-80"></div>
+                        <p className="text-sm font-medium text-gray-800 z-10">Dangerous Lint Buildup</p>
+                      </div>
+                      <div className="mt-4 flex items-center bg-gray-200 rounded-lg p-3 max-w-[160px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 mr-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
-                        <p className="text-xs font-medium text-gray-800">Prevent Fire Hazards</p>
+                        <p className="text-sm font-medium text-gray-800">Prevent Fire Hazards</p>
                       </div>
+                    </div>
+                    
+                    {/* Right cell: Professional technician */}
+                    <div className="flex flex-col items-center justify-center p-6">
+                      <div className="w-24 h-24 rounded-full bg-primary mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-800 text-center">Professional Service</h3>
+                      <p className="text-sm text-center text-gray-600 mt-2">Our trained technicians provide expert dryer vent cleaning</p>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom section: Results area */}
+                  <div className="bg-primary/5 h-[100px] p-4 flex items-center justify-between border-t border-gray-200">
+                    <div className="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm font-medium">Proven Results</span>
+                    </div>
+                    <div className="text-sm font-medium">
+                      100% Satisfaction Guaranteed
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Service badge */}
-              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-sm font-medium text-gray-700 shadow-md">
-                100% Satisfaction Guaranteed
-              </div>
-
-              {/* Results badge */}
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-xs text-gray-700 shadow-md flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Proven Results
               </div>
               
               {/* Fire safety badge */}
