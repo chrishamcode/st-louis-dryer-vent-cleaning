@@ -186,12 +186,12 @@ export default function ServiceAreas() {
                 className={`transition-all duration-300 ${isNearby ? 'ring-2 ring-primary shadow-lg scale-105' : ''}`}
               >
                 <CardContent className="p-6">
-                  <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                  <div className="flex flex-wrap justify-between items-center gap-2 mb-2">
                     <h3 className="text-xl font-semibold">{area.name}</h3>
-                    <div className="flex gap-2">
-                      <Badge variant="outline">{area.state}</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="outline" className="whitespace-nowrap">{area.state}</Badge>
                       {isNearby && (
-                        <Badge className="bg-primary hover:bg-primary" variant="default">
+                        <Badge className="bg-primary hover:bg-primary whitespace-nowrap" variant="default">
                           Nearby
                         </Badge>
                       )}

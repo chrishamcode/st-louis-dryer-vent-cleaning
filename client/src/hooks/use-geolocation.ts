@@ -53,6 +53,11 @@ export function useGeolocation() {
           
           const data = await response.json();
           
+          // Add validation for the returned data
+          if (!data || typeof data !== 'object') {
+            throw new Error("Invalid data returned from location service");
+          }
+          
           setGeolocation({
             coords: {
               latitude,
@@ -66,6 +71,13 @@ export function useGeolocation() {
           });
         } catch (err) {
           // If reverse geocoding fails, we still have coordinates
+          console.error("Geocoding error:", err);
+          
+          let errorMessage = "Unable to determine your precise location details";
+          if (err instanceof Error) {
+            errorMessage = `Location lookup failed: ${err.message}`;
+          }
+          
           setGeolocation({
             coords: {
               latitude,
@@ -75,7 +87,7 @@ export function useGeolocation() {
             city: null,
             state: null,
             loading: false,
-            error: "Unable to determine your precise location details",
+            error: errorMessage,
           });
         }
       },
