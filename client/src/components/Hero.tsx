@@ -63,8 +63,8 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0"></div>
               <img
-                src="/images/dryer-vent-cleaning-service.jpg"
-                alt="Professional technician cleaning a dryer vent in St. Louis"
+                src="/images/dryer-vent-cleaning-collage.png"
+                alt="Professional technician next to dryer vent lint removal results showing fire hazard reduction"
                 className="relative z-10 w-full h-[400px] object-cover"
                 width="800"
                 height="400"
@@ -72,9 +72,17 @@ export default function Hero() {
                 decoding="async"
               />
               
-              {/* Badge */}
+              {/* Service badge */}
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-sm font-medium text-gray-700 shadow-md">
-                Professional • Reliable • Safe
+                100% Satisfaction Guaranteed
+              </div>
+
+              {/* Results badge */}
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-xs text-gray-700 shadow-md flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Real Results Shown
               </div>
               
               {/* Fire safety badge */}
