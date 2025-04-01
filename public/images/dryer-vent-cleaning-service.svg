@@ -1,36 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1200" height="800" fill="#f5f5f5"/>
-
-  <!-- Wall -->
-  <rect x="200" y="100" width="800" height="600" fill="#e0e0e0"/>
-
-  <!-- Dryer Vent Opening -->
-  <circle cx="400" cy="400" r="40" fill="#444444"/>
-  <rect x="360" y="360" width="80" height="80" fill="#666666" rx="10"/>
-
-  <!-- Cleaning Rod -->
-  <path d="M400 400 L800 420" stroke="#333333" stroke-width="20" fill="none"/>
-  <circle cx="800" cy="420" r="15" fill="#444444"/> <!-- Brush head -->
-
-  <!-- Technician -->
-  <g transform="translate(600,300)">
+  <rect width="800" height="400" fill="#f8f9fa" rx="8" ry="8" />
+  
+  <!-- House Outline -->
+  <path d="M150,200 L400,80 L650,200 L650,350 L150,350 Z" fill="#ffffff" stroke="#333333" stroke-width="3" />
+  
+  <!-- Roof -->
+  <path d="M400,80 L650,200 L150,200 Z" fill="#d35f5f" stroke="#333333" stroke-width="2" />
+  
+  <!-- Windows -->
+  <rect x="200" y="230" width="60" height="70" fill="#e1f5fe" stroke="#333333" stroke-width="2" />
+  <rect x="540" y="230" width="60" height="70" fill="#e1f5fe" stroke="#333333" stroke-width="2" />
+  
+  <!-- Door -->
+  <rect x="370" y="270" width="60" height="80" fill="#8d6e63" stroke="#333333" stroke-width="2" />
+  <circle cx="385" cy="310" r="5" fill="#ffc107" />
+  
+  <!-- Dryer Vent on Side of House -->
+  <circle cx="550" cy="180" r="12" fill="#e0e0e0" stroke="#333333" stroke-width="2" />
+  <circle cx="550" cy="180" r="8" fill="#ffffff" stroke="#333333" stroke-width="1" />
+  <circle cx="550" cy="180" r="4" fill="#e0e0e0" />
+  
+  <!-- Service Person -->
+  <g transform="translate(500, 200)">
     <!-- Body -->
-    <path d="M0 0 L40 150 L-40 150 Z" fill="#2B3F6B"/>
+    <rect x="-15" y="0" width="30" height="50" fill="#2196f3" rx="5" ry="5" />
+    
     <!-- Head -->
-    <circle cx="0" cy="-20" r="30" fill="#FFD6B1"/>
-    <!-- Safety Goggles -->
-    <rect x="-20" y="-30" width="40" height="15" rx="5" fill="#FFFFFF"/>
+    <circle cx="0" cy="-15" r="15" fill="#ffdbac" />
+    
+    <!-- Hat -->
+    <path d="M-15,-20 L15,-20 L5,-35 L-5,-35 Z" fill="#1976d2" />
+    
     <!-- Arms -->
-    <path d="M-20 50 L-60 100 M20 50 L150 70" stroke="#2B3F6B" stroke-width="20" fill="none"/>
+    <rect x="-35" y="0" width="20" height="8" fill="#ffdbac" rx="4" ry="4" />
+    <rect x="15" y="0" width="55" height="8" fill="#ffdbac" rx="4" ry="4" />
+    
+    <!-- Legs -->
+    <rect x="-15" y="50" width="10" height="30" fill="#424242" />
+    <rect x="5" y="50" width="10" height="30" fill="#424242" />
+    
+    <!-- Cleaning Tool/Vacuum -->
+    <rect x="25" y="8" width="45" height="10" fill="#757575" />
+    <rect x="70" y="-2" width="5" height="30" fill="#757575" />
+    <path d="M75,25 L90,5 L95,10 L80,28 Z" fill="#9e9e9e" />
+    
+    <!-- Company Logo on Shirt -->
+    <rect x="-10" y="10" width="20" height="10" fill="#ffffff" rx="2" ry="2" />
+    <text x="-8" y="18" font-family="Arial" font-size="6" fill="#1976d2">SLDC</text>
   </g>
-
-  <!-- Professional Equipment -->
-  <g transform="translate(850,450)">
-    <!-- Tool Box -->
-    <rect x="-50" y="-30" width="100" height="60" fill="#FF4444"/>
-    <!-- Equipment -->
-    <circle cx="0" cy="0" r="10" fill="#333333"/>
+  
+  <!-- Dust/Air Flow Effect from Vent -->
+  <path d="M550,170 Q560,160 565,168 T580,165" stroke="#e0e0e0" stroke-width="2" fill="none" />
+  <path d="M550,175 Q570,173 575,180 T590,175" stroke="#e0e0e0" stroke-width="2" fill="none" />
+  <path d="M550,185 Q565,190 570,188 T585,195" stroke="#e0e0e0" stroke-width="2" fill="none" />
+  
+  <!-- Text at Bottom -->
+  <text x="400" y="380" font-family="Arial" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Professional Dryer Vent Cleaning Services in St. Louis</text>
+  
+  <!-- Safety Information -->
+  <g transform="translate(220, 150)">
+    <rect x="0" y="0" width="140" height="70" fill="#ffffff" stroke="#333333" stroke-width="1" rx="5" ry="5" opacity="0.9" />
+    <text x="70" y="20" font-family="Arial" font-size="10" font-weight="bold" fill="#d32f2f" text-anchor="middle">FIRE SAFETY</text>
+    <text x="70" y="40" font-family="Arial" font-size="8" fill="#333333" text-anchor="middle">Regular dryer vent cleaning</text>
+    <text x="70" y="55" font-family="Arial" font-size="8" fill="#333333" text-anchor="middle">prevents household fires</text>
   </g>
 </svg>

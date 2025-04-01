@@ -3,10 +3,23 @@ import { PhoneCall, MessageSquare } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-primary" aria-label="Hero section">
-      <div className="container mx-auto px-4 py-16 sm:py-24">
+    <section className="relative bg-primary overflow-hidden" aria-label="Hero section">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <pattern id="pattern-circles" width="50" height="50" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <circle id="pattern-circle" cx="10" cy="10" r="1.6257413380501518" fill="#fff"></circle>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+        </svg>
+      </div>
+      
+      <div className="container mx-auto px-4 py-16 sm:py-24 relative z-10">
         <div className="grid gap-12 md:grid-cols-2 items-center">
           <div className="flex flex-col justify-center text-white">
+            <div className="inline-block mb-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
+              Trusted Throughout Greater St. Louis
+            </div>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
               Professional Dryer Vent Cleaning in St. Louis
             </h1>
@@ -47,15 +60,31 @@ export default function Hero() {
             </div>
           </div>
           <div className="relative mt-12 md:mt-0">
-            <img
-              src="/images/dryer-vent-cleaning-service.jpg"
-              alt="Professional technician cleaning a dryer vent in St. Louis"
-              className="rounded-lg object-cover shadow-xl w-full h-[400px]"
-              width="800"
-              height="400"
-              loading="eager"
-              decoding="async"
-            />
+            <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0"></div>
+              <img
+                src="/images/dryer-vent-cleaning-service.svg"
+                alt="Professional technician cleaning a dryer vent in St. Louis"
+                className="relative z-10 w-full h-[400px] object-contain"
+                width="800"
+                height="400"
+                loading="eager"
+                decoding="async"
+              />
+              
+              {/* Badge */}
+              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-md text-sm font-medium text-gray-700 shadow-md">
+                Professional • Reliable • Safe
+              </div>
+              
+              {/* Fire safety badge */}
+              <div className="absolute top-4 left-4 bg-red-50 text-red-800 px-3 py-1.5 rounded-full text-xs font-semibold flex items-center shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05c-.867 1.83-1.117 3.49-.728 4.866.387 1.37 1.333 2.512 2.734 3.217.68.34 1.446.545 2.234.612.81.07 1.63.04 2.432-.085 1.587-.247 3.22-1.03 4.372-2.422 1.152-1.392 1.864-3.258 1.756-5.576-.097-1.92-.78-3.313-1.78-4.244-.998-.932-2.302-1.394-3.528-1.515-1.23-.123-2.355.073-3.147.65z" clipRule="evenodd" />
+                </svg>
+                Prevents Home Fires
+              </div>
+            </div>
           </div>
         </div>
       </div>
