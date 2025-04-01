@@ -10,6 +10,11 @@ import ServiceAreas from "@/pages/ServiceAreas";
 import Contact from "@/pages/Contact";
 import BookService from "@/pages/BookService";
 
+// Service Area Pages
+import StLouisCity from "@/pages/service-areas/StLouisCity";
+import StLouisCounty from "@/pages/service-areas/StLouisCounty";
+import StClairCounty from "@/pages/service-areas/StClairCounty";
+
 function Router() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -18,6 +23,9 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/service-areas" component={ServiceAreas} />
+          <Route path="/service-areas/st-louis-city" component={StLouisCity} />
+          <Route path="/service-areas/st-louis-county" component={StLouisCounty} />
+          <Route path="/service-areas/st-clair-county" component={StClairCounty} />
           <Route path="/contact" component={Contact} />
           <Route path="/book" component={BookService} />
           <Route component={NotFound} />

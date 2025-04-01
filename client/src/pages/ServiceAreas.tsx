@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { AlertCircle, MapPin, CheckCircle, Users } from "lucide-react";
+import { AlertCircle, MapPin, CheckCircle, Users, ArrowRight } from "lucide-react";
 import { useGeolocation, calculateDistance, serviceAreaCoordinates, zipToAreaMapping } from "@/hooks/use-geolocation";
 import ContactForm from "@/components/ContactForm";
 import { ServiceAreasSEO } from "@/lib/seo";
@@ -224,6 +225,22 @@ export default function ServiceAreas() {
                         className="h-1.5" 
                         aria-label={`Population size: ${area.population.toLocaleString()}`}
                       />
+                    </div>
+                    
+                    <div className="mt-4 pt-3 border-t">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full"
+                        asChild
+                      >
+                        <Link 
+                          href={`/service-areas/${area.name.toLowerCase().replace(/\s+/g, '-').replace(/[,\.]/g, '')}`}
+                        >
+                          View Details
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </CardContent>
