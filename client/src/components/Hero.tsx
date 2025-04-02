@@ -125,13 +125,10 @@ export default function Hero() {
             </div>
             <div className="p-6">
               <p className="text-gray-700 mb-4">Our certified technicians use professional-grade equipment to thoroughly clean your entire vent system.</p>
-              <div className="flex items-center justify-between p-3 bg-primary/5 rounded-lg">
+              <div className="flex items-center p-3 bg-primary/5 rounded-lg">
                 <div className="font-medium text-gray-800 flex items-center">
                   <span className="text-primary text-lg mr-2">✓</span>
                   100% Satisfaction Guarantee
-                </div>
-                <div className="text-primary font-medium text-sm">
-                  Since 2015
                 </div>
               </div>
             </div>
