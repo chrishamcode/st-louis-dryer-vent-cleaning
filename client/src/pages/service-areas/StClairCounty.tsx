@@ -23,7 +23,7 @@ export default function StClairCounty() {
             "@type": "LocalBusiness",
             "name": "St. Louis Dryer Vent Cleaning",
             "image": "/images/dryer-vent-cleaning-service.jpg",
-            "telephone": "+1-314-555-5555",
+            "telephone": "+1-314-632-6526",
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
@@ -205,7 +205,7 @@ export default function StClairCounty() {
                 
                 <div className="border-t pt-4">
                   <Button className="w-full" size="lg" asChild>
-                    <a href="tel:314-555-5555">Call (314) 555-5555</a>
+                    <a href="tel:+13146326526">Call (314) 632-6526</a>
                   </Button>
                 </div>
               </CardContent>

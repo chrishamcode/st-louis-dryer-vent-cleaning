@@ -40,14 +40,14 @@ export default function Hero() {
           <p className="text-gray-100 text-center text-sm mb-6">Quick response times • Flexible scheduling • Competitive pricing</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="tel:314-555-5555"
-              aria-label="Call or text us at (314) 555-5555"
+              href="tel:+13146326526"
+              aria-label="Call or text us at (314) 632-6526"
               className="bg-white text-gray-800 rounded-md group text-lg font-semibold py-5 px-7 flex items-center justify-center gap-3 hover:scale-105 transition-transform w-full sm:w-auto shadow-lg border border-white/80"
             >
               <PhoneCall className="h-6 w-6 text-primary" aria-hidden="true" />
               <div className="flex flex-col items-start">
                 <span>Call or Text</span>
-                <span className="text-base font-medium">(314) 555-5555</span>
+                <span className="text-base font-medium">(314) 632-6526</span>
               </div>
             </a>
             <a 
