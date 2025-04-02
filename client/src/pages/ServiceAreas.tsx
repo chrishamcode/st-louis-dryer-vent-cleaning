@@ -20,7 +20,7 @@ export default function ServiceAreas() {
     {
       name: "St. Louis City",
       description: "Complete coverage throughout St. Louis City, our primary service area",
-      zips: ["63101", "63102", "63103", "63104"],
+      zips: ["63110", "63101", "63102", "63103", "63104"],
       state: "MO",
       population: 293310
     },

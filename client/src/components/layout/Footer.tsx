@@ -50,7 +50,7 @@ export default function Footer() {
                 (314) 632-6526
               </a>
               <address className="mt-1 text-gray-400 text-xs not-italic">
-                123 Main Street, St. Louis, MO 63101
+                St. Louis, MO 63110
               </address>
             </div>
           </div>

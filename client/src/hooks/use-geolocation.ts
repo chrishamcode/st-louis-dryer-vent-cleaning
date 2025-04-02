@@ -152,6 +152,7 @@ export const serviceAreaCoordinates = {
 // Mapping between ZIP codes and areas
 export const zipToAreaMapping: Record<string, string> = {
   // St. Louis City
+  "63110": "St. Louis City",
   "63101": "St. Louis City",
   "63102": "St. Louis City",
   "63103": "St. Louis City",

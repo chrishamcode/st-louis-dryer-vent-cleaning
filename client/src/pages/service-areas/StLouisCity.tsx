@@ -33,10 +33,10 @@ export default function StLouisCity() {
             "description": "Professional dryer vent cleaning services in St. Louis City, covering Downtown, Central West End, Soulard, and all neighborhoods.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Main Street",
+              "streetAddress": "",
               "addressLocality": "St. Louis",
               "addressRegion": "MO",
-              "postalCode": "63101",
+              "postalCode": "63110",
               "addressCountry": "US"
             },
             "geo": {

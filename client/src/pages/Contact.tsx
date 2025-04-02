@@ -18,10 +18,10 @@ export default function Contact() {
       "email": "info@stlouisdryerventcleaning.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Main Street",
+        "streetAddress": "",
         "addressLocality": "St. Louis",
         "addressRegion": "MO",
-        "postalCode": "63101",
+        "postalCode": "63110",
         "addressCountry": "US"
       },
       "openingHours": "Mo-Fr 08:00-18:00 Sa 09:00-16:00"
@@ -87,9 +87,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold">Address</h3>
                       <p className="text-gray-600">
-                        123 Main Street
-                        <br />
-                        St. Louis, MO 63101
+                        St. Louis, MO 63110
                       </p>
                     </div>
                   </div>

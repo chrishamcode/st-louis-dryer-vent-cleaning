@@ -27,10 +27,10 @@ export default function StLouisCounty() {
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Main Street",
+              "streetAddress": "",
               "addressLocality": "St. Louis",
               "addressRegion": "MO",
-              "postalCode": "63101",
+              "postalCode": "63110",
               "addressCountry": "US"
             },
             "areaServed": {
