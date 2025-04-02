@@ -49,14 +49,14 @@ export default function Hero() {
           <h2 className="text-white text-center font-bold text-xl mb-5">Ready to Get Started?</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="tel:314-555-0123"
-              aria-label="Call or text us at (314) 555-0123"
+              href="tel:314-578-8648"
+              aria-label="Call or text us at (314) 578-8648"
               className="bg-white text-gray-800 rounded-md group text-lg font-semibold py-6 px-8 flex items-center justify-center gap-3 hover:scale-105 transition-transform w-full sm:w-auto shadow-lg"
             >
               <PhoneCall className="h-6 w-6 text-primary" aria-hidden="true" />
               <div className="flex flex-col items-start">
                 <span>Call or Text</span>
-                <span className="text-base">(314) 555-0123</span>
+                <span className="text-base">(314) 578-8648</span>
               </div>
             </a>
             <a 

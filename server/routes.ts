@@ -15,7 +15,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // Here you would typically send an email or store the contact form
+      // In a production environment, we would send an email to chrishamilton37@gmail.com
+      console.log(`Contact form submission would be sent to: chrishamilton37@gmail.com`);
+      console.log(`Form data:`, result.data);
+      
       // For now, just return success
       res.json({ message: "Message received" });
     } catch (error) {
