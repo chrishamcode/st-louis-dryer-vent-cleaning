@@ -19,7 +19,7 @@ export default function Home() {
             "image": "/images/dryer-vent-cleaning-service.jpg",
             "@id": "https://stlouisdryerventcleaning.com",
             "url": "https://stlouisdryerventcleaning.com",
-            "telephone": "+1-314-578-8648",
+            "telephone": "+1-314-555-5555",
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",

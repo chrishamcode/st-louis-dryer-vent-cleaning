@@ -79,11 +79,11 @@ export default function Navbar() {
               <div className="border-t my-4"></div>
               
               <a 
-                href="tel:314-578-8648" 
+                href="tel:314-555-5555" 
                 className="flex items-center text-primary font-medium"
               >
                 <Phone className="mr-3 h-5 w-5" />
-                (314) 578-8648
+                (314) 555-5555
               </a>
               
               <Link 
@@ -128,7 +128,7 @@ export default function Navbar() {
           
           <div className="flex items-center space-x-3">
             <a 
-              href="tel:314-578-8648" 
+              href="tel:314-555-5555" 
               className={`flex items-center px-4 py-2 rounded-md transition-colors ${
                 scrolled 
                   ? 'text-primary hover:bg-gray-100' 
@@ -136,7 +136,7 @@ export default function Navbar() {
               }`}
             >
               <Phone className="mr-2 h-4 w-4" />
-              (314) 578-8648
+              (314) 555-5555
             </a>
             
             <Link href="#contact-form" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center">
