@@ -109,6 +109,10 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-primary mr-2 text-lg">•</span>
+                    <span>Locally owned and operated</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2 text-lg">•</span>
                     <span>Experienced technicians</span>
                   </li>
                   <li className="flex items-start">
