@@ -41,8 +41,8 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end">
             <img 
               src={technicianImage} 
-              alt="Professional technician with examples of lint buildup removed from dryer vents" 
-              className="rounded-xl shadow-lg max-w-full h-auto max-h-[400px] object-contain"
+              alt="Professional dryer vent cleaning service" 
+              className="rounded-xl shadow-lg max-w-full h-auto max-h-[400px] object-cover"
             />
           </div>
         </div>
