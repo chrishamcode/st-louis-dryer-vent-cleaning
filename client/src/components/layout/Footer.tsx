@@ -29,59 +29,83 @@ export default function Footer() {
   const visibleIlCities = showAllIlCities ? ilCities : ilCities.slice(0, 8);
   
   return (
-    <footer className="border-t bg-gray-50" aria-label="Site footer">
-      <div className="container mx-auto px-4 py-8 sm:py-12">
-        <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-gray-900 text-gray-200" aria-label="Site footer">
+      <div className="container mx-auto px-4 py-12 sm:py-16">
+        {/* Top section */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-12">
           <div>
-            <h3 className="text-lg font-semibold">St. Louis Dryer Vent Cleaning</h3>
-            <p className="mt-2 text-sm text-gray-600">
+            <h3 className="text-xl font-bold text-white mb-4">St. Louis Dryer Vent Cleaning</h3>
+            <p className="text-gray-400">
               Professional dryer vent cleaning services throughout the Greater St. Louis Metropolitan Area.
             </p>
+            <div className="mt-6">
+              <a 
+                href="tel:314-555-0123" 
+                className="text-lg font-semibold text-primary hover:text-primary/90 flex items-center"
+                aria-label="Call us at (314) 555-0123"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 mr-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                (314) 555-0123
+              </a>
+              <address className="mt-2 text-gray-400 not-italic">
+                123 Main Street<br />
+                St. Louis, MO 63101
+              </address>
+            </div>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold">Quick Links</h4>
-            <nav className="mt-4 flex flex-col space-y-2" aria-label="Footer navigation">
-              <Link href="/" className="text-sm text-gray-600 hover:text-primary">
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <nav className="flex flex-col space-y-3" aria-label="Footer navigation">
+              <Link href="/" className="text-gray-400 hover:text-primary transition-colors">
                 Home
               </Link>
-              <Link href="/service-areas" className="text-sm text-gray-600 hover:text-primary">
+              <Link href="/service-areas" className="text-gray-400 hover:text-primary transition-colors">
                 Service Areas
               </Link>
-              <Link href="/contact" className="text-sm text-gray-600 hover:text-primary">
+              <Link href="/contact" className="text-gray-400 hover:text-primary transition-colors">
                 Contact
+              </Link>
+              <Link href="#contact-form" className="text-gray-400 hover:text-primary transition-colors">
+                Get a Quote
               </Link>
             </nav>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-semibold">Service Areas</h4>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-2 text-sm text-gray-600">
+            <h4 className="text-white font-semibold mb-4">Service Areas</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-400">
               <div>
-                <strong className="block mb-1">Counties:</strong>
-                <div className="mb-2 text-xs">
-                  <strong className="text-gray-500">Missouri:</strong><br />
-                  <span>St. Louis County</span><br />
-                  <span>St. Charles County</span><br />
-                  <span>St. Louis City</span>
+                <h5 className="font-medium text-white mb-2">Counties</h5>
+                <div className="mb-4">
+                  <div className="font-medium text-gray-300 mb-1">Missouri:</div>
+                  <ul className="space-y-1 text-sm">
+                    <li>St. Louis County</li>
+                    <li>St. Charles County</li>
+                    <li>St. Louis City</li>
+                  </ul>
                 </div>
-                <div className="text-xs">
-                  <strong className="text-gray-500">Illinois:</strong><br />
-                  <span>St. Clair County</span><br />
-                  <span>Madison County</span>
+                <div>
+                  <div className="font-medium text-gray-300 mb-1">Illinois:</div>
+                  <ul className="space-y-1 text-sm">
+                    <li>St. Clair County</li>
+                    <li>Madison County</li>
+                  </ul>
                 </div>
               </div>
               
               <div>
-                <strong className="block mb-1">Cities Served:</strong>
+                <h5 className="font-medium text-white mb-2">Cities Served</h5>
                 <div className="space-y-4">
                   {/* Missouri Cities */}
                   <div>
-                    <div className="flex items-center justify-between">
-                      <strong className="text-xs text-gray-500">Missouri:</strong>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-medium text-gray-300">Missouri:</div>
                       <button 
                         onClick={() => setShowAllMoCities(!showAllMoCities)}
-                        className="text-xs text-primary flex items-center"
+                        className="text-xs text-primary flex items-center hover:underline"
                         aria-label={showAllMoCities ? "Show fewer Missouri cities" : "Show all Missouri cities"}
                       >
                         {showAllMoCities ? (
@@ -92,7 +116,7 @@ export default function Footer() {
                       </button>
                     </div>
                     
-                    <div className="mt-1 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-1 text-sm">
                       {visibleMoCities.map((city, index) => (
                         <span key={index} className="truncate">{city}</span>
                       ))}
@@ -101,20 +125,20 @@ export default function Footer() {
                     {showAllMoCities && (
                       <Link 
                         href="/service-areas" 
-                        className="text-xs text-primary hover:underline mt-1 inline-block"
+                        className="text-primary hover:underline mt-2 inline-block text-sm"
                       >
-                        View all Missouri service areas
+                        View all Missouri service areas →
                       </Link>
                     )}
                   </div>
                   
                   {/* Illinois Cities */}
                   <div>
-                    <div className="flex items-center justify-between">
-                      <strong className="text-xs text-gray-500">Illinois:</strong>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-medium text-gray-300">Illinois:</div>
                       <button 
                         onClick={() => setShowAllIlCities(!showAllIlCities)}
-                        className="text-xs text-primary flex items-center"
+                        className="text-xs text-primary flex items-center hover:underline"
                         aria-label={showAllIlCities ? "Show fewer Illinois cities" : "Show all Illinois cities"}
                       >
                         {showAllIlCities ? (
@@ -125,7 +149,7 @@ export default function Footer() {
                       </button>
                     </div>
                     
-                    <div className="mt-1 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-0.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-1 text-sm">
                       {visibleIlCities.map((city, index) => (
                         <span key={index} className="truncate">{city}</span>
                       ))}
@@ -134,9 +158,9 @@ export default function Footer() {
                     {showAllIlCities && (
                       <Link 
                         href="/service-areas" 
-                        className="text-xs text-primary hover:underline mt-1 inline-block"
+                        className="text-primary hover:underline mt-2 inline-block text-sm"
                       >
-                        View all Illinois service areas
+                        View all Illinois service areas →
                       </Link>
                     )}
                   </div>
@@ -144,25 +168,21 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          <div className="lg:col-span-4 border-t pt-8 mt-8">
-            <div className="text-center">
-              <a 
-                href="tel:314-555-0123" 
-                className="text-lg font-semibold text-primary hover:text-primary/90"
-                aria-label="Call us at (314) 555-0123"
-              >
-                (314) 555-0123
+        </div>
+        
+        {/* Bottom section with copyright */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-gray-500 mb-4 md:mb-0">
+              © {new Date().getFullYear()} St. Louis Dryer Vent Cleaning. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-400 hover:text-primary">
+                Privacy Policy
               </a>
-              <address className="mt-2 text-sm text-gray-600 not-italic">
-                123 Main Street<br />
-                St. Louis, MO 63101
-              </address>
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-sm text-gray-600">
-                © {new Date().getFullYear()} St. Louis Dryer Vent Cleaning. All rights reserved.
-              </p>
+              <a href="#" className="text-gray-400 hover:text-primary">
+                Terms of Service
+              </a>
             </div>
           </div>
         </div>

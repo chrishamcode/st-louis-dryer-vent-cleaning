@@ -45,37 +45,40 @@ export default function Hero() {
         </div>
         
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-16">
-          <Button 
-            size="lg"
-            variant="secondary" 
-            className="group text-lg font-semibold py-6 px-8 flex items-center justify-center gap-3 hover:scale-105 transition-transform w-full sm:w-auto"
-            asChild
-          >
-            <a 
-              href="tel:314-555-0123"
-              aria-label="Call or text us at (314) 555-0123"
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 sm:p-8 mb-12 md:mb-16 max-w-3xl mx-auto">
+          <h2 className="text-white text-center font-bold text-xl mb-5">Ready to Get Started?</h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button 
+              size="lg"
+              variant="secondary" 
+              className="group text-lg font-semibold py-6 px-8 flex items-center justify-center gap-3 hover:scale-105 transition-transform w-full sm:w-auto shadow-lg"
+              asChild
             >
-              <PhoneCall className="h-6 w-6" aria-hidden="true" />
-              <div className="flex flex-col items-start">
-                <span>Call or Text</span>
-                <span className="text-base">(314) 555-0123</span>
-              </div>
-            </a>
-          </Button>
-          <Button 
-            size="lg"
-            variant="outline" 
-            className="text-lg font-semibold py-6 px-8 hover:bg-white/20 w-full sm:w-auto" 
-            asChild
-          >
-            <a 
-              href="#contact-form"
-              aria-label="Schedule service - opens contact form"
+              <a 
+                href="tel:314-555-0123"
+                aria-label="Call or text us at (314) 555-0123"
+              >
+                <PhoneCall className="h-6 w-6" aria-hidden="true" />
+                <div className="flex flex-col items-start">
+                  <span>Call or Text</span>
+                  <span className="text-base">(314) 555-0123</span>
+                </div>
+              </a>
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline" 
+              className="text-lg font-semibold py-6 px-8 hover:bg-white/20 w-full sm:w-auto border-white text-white shadow-lg" 
+              asChild
             >
-              Schedule Service
-            </a>
-          </Button>
+              <a 
+                href="#contact-form"
+                aria-label="Schedule service - opens contact form"
+              >
+                Schedule Service
+              </a>
+            </Button>
+          </div>
         </div>
         
         {/* Service Features */}
