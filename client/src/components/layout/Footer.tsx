@@ -49,16 +49,6 @@ export default function Footer() {
                 </svg>
                 (314) 555-5555
               </a>
-              <a 
-                href="mailto:info@stlouisdryerventcleaning.com"
-                className="text-sm text-gray-300 hover:text-primary flex items-center mt-1"
-                aria-label="Email us at info@stlouisdryerventcleaning.com"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-4 h-4 mr-1">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@stlouisdryerventcleaning.com
-              </a>
               <address className="mt-1 text-gray-400 text-xs not-italic">
                 123 Main Street, St. Louis, MO 63101
               </address>
