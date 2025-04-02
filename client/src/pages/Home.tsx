@@ -26,11 +26,11 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-primary mr-2 text-lg">•</span>
-                    <span>Professional, experienced technicians</span>
+                    <span>Experienced technicians</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2 text-lg">•</span>
-                    <span>State-of-the-art cleaning equipment</span>
+                    <span>Professional cleaning equipment</span>
                   </li>
                 </ul>
               </div>
