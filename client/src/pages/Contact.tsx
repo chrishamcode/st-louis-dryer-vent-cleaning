@@ -23,7 +23,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold">Phone</h3>
                       <p className="text-gray-600">
-                        <a href="tel:314-555-0123">(314) 555-0123</a>
+                        <a href="tel:314-578-8648">(314) 578-8648</a>
                       </p>
                     </div>
                   </div>
@@ -33,8 +33,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold">Email</h3>
                       <p className="text-gray-600">
-                        <a href="mailto:info@stlouisdryervent.com">
-                          info@stlouisdryervent.com
+                        <a href="mailto:chrishamilton37@gmail.com">
+                          chrishamilton37@gmail.com
                         </a>
                       </p>
                     </div>
@@ -66,7 +66,7 @@ export default function Contact() {
                 </div>
 
                 <Button className="mt-6 w-full" asChild>
-                  <a href="tel:314-555-0123">
+                  <a href="tel:314-578-8648">
                     <PhoneCall className="mr-2 h-4 w-4" />
                     Call Now
                   </a>
