@@ -80,9 +80,6 @@ export default function Footer() {
               <Link href="#contact-form" className="text-gray-400 hover:text-primary transition-colors text-xs">
                 Get a Quote
               </Link>
-              <Link href="/loading-demo" className="text-gray-400 hover:text-primary transition-colors text-xs">
-                Loading Demo
-              </Link>
             </nav>
           </div>
 
