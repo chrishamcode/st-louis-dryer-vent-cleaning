@@ -55,42 +55,42 @@ export default function Navbar() {
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[80%] sm:w-[385px]">
-            <div className="py-6">
-              <Link href="/" className="text-xl font-bold text-primary block mb-6">
+          <SheetContent side="right" className="w-[60%] max-w-[250px] sm:w-[300px]">
+            <div className="py-4">
+              <Link href="/" className="text-lg font-bold text-primary block mb-4">
                 St. Louis Dryer Vent
               </Link>
             </div>
             
-            <nav className="flex flex-col gap-5">
+            <nav className="flex flex-col gap-4">
               <Link href="/" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <Home className="mr-3 h-5 w-5" />
+                <Home className="mr-2 h-4 w-4" />
                 <span className="font-medium">Home</span>
               </Link>
               <Link href="/service-areas" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <MapPin className="mr-3 h-5 w-5" />
+                <MapPin className="mr-2 h-4 w-4" />
                 <span className="font-medium">Service Areas</span>
               </Link>
               <Link href="/contact" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <MessageSquare className="mr-3 h-5 w-5" />
+                <MessageSquare className="mr-2 h-4 w-4" />
                 <span className="font-medium">Contact</span>
               </Link>
               
-              <div className="border-t my-4"></div>
+              <div className="border-t my-3"></div>
               
               <a 
                 href="tel:+13146326526" 
                 className="flex items-center text-primary font-medium"
               >
-                <Phone className="mr-3 h-5 w-5" />
+                <Phone className="mr-2 h-4 w-4" />
                 (314) 632-6526
               </a>
               
               <Link 
                 href="#contact-form" 
-                className="mt-4 bg-primary text-white py-3 px-4 rounded-md flex items-center justify-center"
+                className="mt-3 bg-primary text-white py-2 px-3 rounded-md flex items-center justify-center"
               >
-                <Calendar className="mr-2 h-5 w-5" />
+                <Calendar className="mr-2 h-4 w-4" />
                 Schedule Service
               </Link>
             </nav>
