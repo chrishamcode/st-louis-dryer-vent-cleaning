@@ -55,42 +55,42 @@ export default function Navbar() {
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[60%] max-w-[250px] sm:w-[300px]">
-            <div className="py-4">
-              <Link href="/" className="text-lg font-bold text-primary block mb-4">
+          <SheetContent side="right" className="w-[50%] max-w-[200px] sm:w-[280px]">
+            <div className="py-2">
+              <Link href="/" className="text-base font-bold text-primary block mb-2">
                 St. Louis Dryer Vent
               </Link>
             </div>
             
-            <nav className="flex flex-col gap-4">
-              <Link href="/" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <Home className="mr-2 h-4 w-4" />
+            <nav className="flex flex-col gap-3">
+              <Link href="/" className="flex items-center text-gray-700 hover:text-primary transition-colors text-sm">
+                <Home className="mr-1.5 h-3.5 w-3.5" />
                 <span className="font-medium">Home</span>
               </Link>
-              <Link href="/service-areas" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <MapPin className="mr-2 h-4 w-4" />
+              <Link href="/service-areas" className="flex items-center text-gray-700 hover:text-primary transition-colors text-sm">
+                <MapPin className="mr-1.5 h-3.5 w-3.5" />
                 <span className="font-medium">Service Areas</span>
               </Link>
-              <Link href="/contact" className="flex items-center text-gray-700 hover:text-primary transition-colors">
-                <MessageSquare className="mr-2 h-4 w-4" />
+              <Link href="/contact" className="flex items-center text-gray-700 hover:text-primary transition-colors text-sm">
+                <MessageSquare className="mr-1.5 h-3.5 w-3.5" />
                 <span className="font-medium">Contact</span>
               </Link>
               
-              <div className="border-t my-3"></div>
+              <div className="border-t my-2"></div>
               
               <a 
                 href="tel:+13146326526" 
-                className="flex items-center text-primary font-medium"
+                className="flex items-center text-primary font-medium text-sm"
               >
-                <Phone className="mr-2 h-4 w-4" />
+                <Phone className="mr-1.5 h-3.5 w-3.5" />
                 (314) 632-6526
               </a>
               
               <Link 
                 href="#contact-form" 
-                className="mt-3 bg-primary text-white py-2 px-3 rounded-md flex items-center justify-center"
+                className="mt-2 bg-primary text-white py-1.5 px-2.5 rounded-md flex items-center justify-center text-sm"
               >
-                <Calendar className="mr-2 h-4 w-4" />
+                <Calendar className="mr-1.5 h-3.5 w-3.5" />
                 Schedule Service
               </Link>
             </nav>
