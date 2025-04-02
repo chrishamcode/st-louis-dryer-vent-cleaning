@@ -5,7 +5,7 @@ export default function Hero() {
   // Image for the technician and lint buildup showcase
   const technicianImage = "/technician-lint-showcase.png";
   return (
-    <section className="relative bg-primary overflow-hidden" aria-label="Hero section">
+    <section className="relative bg-primary overflow-hidden pt-16 md:pt-20" aria-label="Hero section">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
