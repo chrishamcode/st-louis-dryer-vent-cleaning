@@ -1,0 +1,83 @@
+/* Custom mobile menu styles for Android optimization with !important tags to ensure styles are applied */
+/* Direct targeting with full specificity for every element */
+[data-state="open"] .mobile-menu-sheet {
+  width: 40% !important;
+  max-width: 150px !important;
+}
+
+@media (min-width: 640px) {
+  [data-state="open"] .mobile-menu-sheet {
+    max-width: 250px !important;
+  }
+}
+
+/* Override the base SheetContent styles */
+[role="dialog"] [data-state="open"] {
+  width: 40% !important;
+  max-width: 150px !important;
+}
+
+@media (min-width: 640px) {
+  [role="dialog"] [data-state="open"] {
+    max-width: 250px !important;
+  }
+}
+
+/* Extreme override for all sheet content */
+[role="dialog"] > div:last-child {
+  width: 40% !important;
+  max-width: 150px !important;
+}
+
+/* Direct inline style override */
+button.mobile-menu-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem !important;
+  border-radius: 0.375rem !important;
+}
+
+a.mobile-menu-title {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.25rem !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  display: block !important;
+}
+
+nav.mobile-menu-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+}
+
+a.mobile-menu-link, .mobile-menu-link {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 0.75rem !important;
+  transition: color 0.2s ease !important;
+}
+
+a.mobile-menu-link svg, .mobile-menu-link svg {
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  margin-right: 0.25rem !important;
+}
+
+.mobile-menu-divider {
+  border-top-width: 1px !important;
+  margin-top: 0.375rem !important;
+  margin-bottom: 0.375rem !important;
+}
+
+a.mobile-menu-cta, .mobile-menu-cta {
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0.5rem !important;
+  margin-top: 0.375rem !important;
+  border-radius: 0.375rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

@@ -6,6 +6,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import "./MobileMenu.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +23,29 @@ export default function Navbar() {
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Add a direct style override for mobile menu
+  useEffect(() => {
+    // Apply hard-coded styles directly to ensure they are applied
+    const style = document.createElement('style');
+    style.textContent = `
+      [data-state="open"] {
+        width: 40% !important;
+        max-width: 150px !important;
+      }
+      
+      @media (min-width: 640px) {
+        [data-state="open"] {
+          max-width: 250px !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   return (
@@ -45,7 +69,7 @@ export default function Navbar() {
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
             <button 
-              className={`p-2 rounded-md transition-colors ${
+              className={`mobile-menu-button ${
                 scrolled 
                   ? 'text-gray-700 hover:bg-gray-100' 
                   : 'text-white hover:bg-white/10'
@@ -55,42 +79,42 @@ export default function Navbar() {
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[40%] max-w-[150px] sm:w-[250px]">
-            <div className="py-1">
-              <Link href="/" className="text-xs font-bold text-primary block mb-1">
+          <SheetContent side="right" className="mobile-menu-sheet">
+            <div>
+              <Link href="/" className="mobile-menu-title text-primary">
                 St. Louis
               </Link>
             </div>
             
-            <nav className="flex flex-col gap-2">
-              <Link href="/" className="flex items-center text-gray-700 hover:text-primary transition-colors text-xs">
-                <Home className="mr-1 h-3 w-3" />
+            <nav className="mobile-menu-nav">
+              <Link href="/" className="mobile-menu-link text-gray-700 hover:text-primary">
+                <Home />
                 <span className="font-medium">Home</span>
               </Link>
-              <Link href="/service-areas" className="flex items-center text-gray-700 hover:text-primary transition-colors text-xs">
-                <MapPin className="mr-1 h-3 w-3" />
+              <Link href="/service-areas" className="mobile-menu-link text-gray-700 hover:text-primary">
+                <MapPin />
                 <span className="font-medium">Areas</span>
               </Link>
-              <Link href="/contact" className="flex items-center text-gray-700 hover:text-primary transition-colors text-xs">
-                <MessageSquare className="mr-1 h-3 w-3" />
+              <Link href="/contact" className="mobile-menu-link text-gray-700 hover:text-primary">
+                <MessageSquare />
                 <span className="font-medium">Contact</span>
               </Link>
               
-              <div className="border-t my-1.5"></div>
+              <div className="mobile-menu-divider"></div>
               
               <a 
                 href="tel:+13146326526" 
-                className="flex items-center text-primary font-medium text-xs"
+                className="mobile-menu-link text-primary font-medium"
               >
-                <Phone className="mr-1 h-3 w-3" />
+                <Phone />
                 <span>Call Us</span>
               </a>
               
               <Link 
                 href="#contact-form" 
-                className="mt-1.5 bg-primary text-white py-1 px-2 rounded-md flex items-center justify-center text-xs"
+                className="mobile-menu-cta bg-primary text-white"
               >
-                <Calendar className="mr-1 h-3 w-3" />
+                <Calendar />
                 <span>Book Now</span>
               </Link>
             </nav>
