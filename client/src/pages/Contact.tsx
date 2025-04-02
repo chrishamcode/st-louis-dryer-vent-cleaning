@@ -14,7 +14,7 @@ export default function Contact() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "St. Louis Dryer Vent Cleaning",
-      "telephone": "+1-314-555-5555",
+      "telephone": "+1-314-632-6526",
       "email": "info@stlouisdryerventcleaning.com",
       "address": {
         "@type": "PostalAddress",
@@ -45,7 +45,7 @@ export default function Contact() {
           {JSON.stringify(contactSchema)}
         </script>
         <meta name="keywords" content="dryer vent cleaning contact, St. Louis dryer vent service, schedule dryer cleaning, dryer vent cleaning quote, dryer vent service near me" />
-        <meta name="description" content="Contact St. Louis Dryer Vent Cleaning at (314) 555-5555 or email us to schedule your dryer vent cleaning service. Professional, affordable, and reliable service throughout the St. Louis area." />
+        <meta name="description" content="Contact St. Louis Dryer Vent Cleaning at (314) 632-6526 or email us to schedule your dryer vent cleaning service. Professional, affordable, and reliable service throughout the St. Louis area." />
       </Helmet>
       
       <div className="container mx-auto px-4">
@@ -65,7 +65,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold">Phone</h3>
                       <p className="text-gray-600">
-                        <a href="tel:314-555-5555">(314) 555-5555</a>
+                        <a href="tel:+13146326526">(314) 632-6526</a>
                       </p>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                 </div>
 
                 <Button className="mt-6 w-full" asChild>
-                  <a href="tel:314-555-5555">
+                  <a href="tel:+13146326526">
                     <PhoneCall className="mr-2 h-4 w-4" />
                     Call Now
                   </a>
