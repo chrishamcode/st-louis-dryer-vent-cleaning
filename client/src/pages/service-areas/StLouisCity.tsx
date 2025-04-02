@@ -33,7 +33,6 @@ export default function StLouisCity() {
             "description": "Professional dryer vent cleaning services in St. Louis City, covering Downtown, Central West End, Soulard, and all neighborhoods.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "",
               "addressLocality": "St. Louis",
               "addressRegion": "MO",
               "postalCode": "63110",
@@ -47,6 +46,7 @@ export default function StLouisCity() {
             "areaServed": {
               "@type": "City",
               "name": "St. Louis City",
+              "addressRegion": "MO",
               "sameAs": "https://en.wikipedia.org/wiki/St._Louis"
             },
             "url": "https://stlouisdryerventcleaning.com/service-areas/st-louis-city",

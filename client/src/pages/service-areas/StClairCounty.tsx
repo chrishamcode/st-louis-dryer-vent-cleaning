@@ -27,7 +27,6 @@ export default function StClairCounty() {
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "",
               "addressLocality": "St. Louis",
               "addressRegion": "MO",
               "postalCode": "63110",

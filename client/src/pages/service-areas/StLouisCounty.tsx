@@ -27,7 +27,6 @@ export default function StLouisCounty() {
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "",
               "addressLocality": "St. Louis",
               "addressRegion": "MO",
               "postalCode": "63110",
@@ -36,6 +35,7 @@ export default function StLouisCounty() {
             "areaServed": {
               "@type": "County",
               "name": "St. Louis County",
+              "addressRegion": "MO",
               "sameAs": "https://en.wikipedia.org/wiki/St._Louis_County,_Missouri"
             },
             "url": "https://stlouisdryerventcleaning.com/service-areas/st-louis-county",

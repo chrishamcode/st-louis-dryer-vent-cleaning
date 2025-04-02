@@ -99,36 +99,43 @@ export default function SEO({
             "@type": "LocalBusiness",
             "name": "St. Louis Dryer Vent Cleaning",
             "image": "/images/dryer-vent-cleaning-service.jpg",
-            "telephone": "+1-314-555-5555",
+            "telephone": "+1-314-632-6526",
             "email": "info@stlouisdryerventcleaning.com",
             "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "St. Louis",
+              "addressRegion": "MO",
+              "postalCode": "63110",
+              "addressCountry": "US"
+            },
             "openingHours": "Mo-Fr 08:00-18:00 Sa 09:00-16:00",
             "description": "Professional dryer vent cleaning services in St. Louis, MO and surrounding areas. We help prevent dryer fires, reduce energy costs, and extend the life of your appliance.",
             "areaServed": [
               {
                 "@type": "County",
                 "name": "St. Louis County",
-                "state": "MO"
+                "addressRegion": "MO"
               },
               {
                 "@type": "County",
                 "name": "St. Charles County",
-                "state": "MO"
+                "addressRegion": "MO"
               },
               {
                 "@type": "City",
                 "name": "St. Louis",
-                "state": "MO"
+                "addressRegion": "MO"
               },
               {
                 "@type": "County",
                 "name": "St. Clair County",
-                "state": "IL"
+                "addressRegion": "IL"
               },
               {
                 "@type": "County",
                 "name": "Madison County",
-                "state": "IL"
+                "addressRegion": "IL"
               }
             ],
             "serviceArea": {
