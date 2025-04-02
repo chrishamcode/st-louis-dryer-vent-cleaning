@@ -2,10 +2,52 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PhoneCall, Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { ContactSEO } from "@/lib/seo";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
+  // Structured data for local business contact page
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "St. Louis Dryer Vent Cleaning Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "St. Louis Dryer Vent Cleaning",
+      "telephone": "+1-314-578-8648",
+      "email": "chrishamilton37@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "St. Louis",
+        "addressRegion": "MO",
+        "postalCode": "63101",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00 Sa 09:00-16:00"
+    },
+    "serviceType": "Dryer vent cleaning",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.6270,
+        "longitude": -90.1994
+      },
+      "geoRadius": "50"
+    }
+  };
   return (
     <div className="py-16">
+      <ContactSEO />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(contactSchema)}
+        </script>
+        <meta name="keywords" content="dryer vent cleaning contact, St. Louis dryer vent service, schedule dryer cleaning, dryer vent cleaning quote, dryer vent service near me" />
+        <meta name="description" content="Contact St. Louis Dryer Vent Cleaning at (314) 578-8648 or email us to schedule your dryer vent cleaning service. Professional, affordable, and reliable service throughout the St. Louis area." />
+      </Helmet>
+      
       <div className="container mx-auto px-4">
         <h1 className="mb-8 text-center text-4xl font-bold">Contact Us</h1>
         <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">

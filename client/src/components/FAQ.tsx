@@ -4,10 +4,72 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Helmet } from "react-helmet";
 
 export default function FAQ() {
+  // Structured data for FAQ schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is dryer vent cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dryer vent cleaning is the process of removing lint, debris, and blockages from your dryer's ventilation system. This includes the duct that runs from your dryer to the outside of your home, which over time can become clogged with lint that escapes your dryer's lint trap. Our professional service uses specialized tools including high-powered vacuum systems and rotary brushes to thoroughly clean the entire vent path."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is dryer vent cleaning necessary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dryer vent cleaning is essential for several important reasons: 1) Fire Prevention: Lint is highly flammable, and according to the U.S. Fire Administration, there are approximately 2,900 home dryer fires reported each year. 2) Energy Efficiency: A clogged vent forces your dryer to work harder and run longer, increasing energy consumption and utility bills. 3) Extended Appliance Life: Regular cleaning helps prevent overheating and unnecessary wear on your dryer components. 4) Reduced Drying Time: Clean vents allow proper airflow, helping clothes dry faster. 5) Health Benefits: Prevents mold growth and improves indoor air quality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should dryer vents be cleaned?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The National Fire Protection Association recommends that dryer vents be inspected and cleaned at least once per year. However, if you notice any warning signs like longer drying times, burning smells, excessive heat from the dryer, or lint visible around the vent opening, you should schedule a cleaning immediately. Households with high laundry volume, homes with pets, or vents with longer or more complex ductwork may require more frequent cleanings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is dryer vent cleaning performed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our professional dryer vent cleaning process includes: 1) Inspection: We thoroughly examine your dryer vent system to assess its condition and identify any issues. 2) Disconnect: Your dryer is carefully disconnected and moved to access the vent. 3) Cleaning: Using professional-grade equipment, we remove lint and debris from the entire duct system. 4) Rotary Brushing: A specialized rotating brush system is used to scrub the interior walls of the ductwork. 5) High-Powered Vacuum: Industrial-strength vacuum equipment extracts all loosened debris. 6) Exterior Vent Check: We clean the outside vent opening and ensure it operates properly. 7) Reconnection: Your dryer is reconnected and tested for proper airflow. 8) Final Inspection: We confirm that the entire system is clean and functioning correctly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose St. Louis Dryer Vent Cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer local expertise in St. Louis area homes, certified technicians, comprehensive service cleaning the entire vent system, advanced professional equipment, 100% satisfaction guarantee, transparent pricing with no hidden fees, and flexible scheduling to accommodate your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the signs that my dryer vent needs cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Look out for these warning signs: clothes take longer than usual to dry, the dryer or your laundry feels unusually hot, burning smell when the dryer is running, visible lint accumulation around the dryer hose or exterior vent opening, the dryer automatically shuts off before clothes are dry (due to overheating), it's been more than a year since your last cleaning, and excessive humidity in the laundry room when the dryer is running."
+        }
+      }
+    ]
+  };
   return (
     <section className="bg-white py-16" aria-labelledby="faq-heading">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
+      
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <h2 

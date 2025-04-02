@@ -10,12 +10,16 @@ export default function StLouisCity() {
     <div className="py-16">
       <Helmet>
         <title>Dryer Vent Cleaning in St. Louis City | Professional Services</title>
-        <meta name="description" content="Professional dryer vent cleaning services throughout St. Louis City. Prevent fire hazards, improve efficiency, and extend the life of your dryer." />
+        <meta name="description" content="Professional dryer vent cleaning services throughout St. Louis City. Prevent fire hazards, improve efficiency, and extend the life of your dryer. Serving Downtown, Central West End, Soulard, and all city neighborhoods." />
         <link rel="canonical" href="https://stlouisdryerventcleaning.com/service-areas/st-louis-city" />
         <meta name="geo.region" content="US-MO" />
         <meta name="geo.placename" content="St. Louis" />
         <meta name="geo.position" content="38.6270;-90.1994" />
         <meta name="ICBM" content="38.6270, -90.1994" />
+        
+        {/* Voice Search and Natural Language Optimization */}
+        <meta name="keywords" content="dryer vent cleaning St. Louis City, dryer maintenance downtown St. Louis, Central West End dryer vent service, Soulard dryer vent cleaning, Lafayette Square dryer maintenance, The Hill dryer vent cleaners, best dryer vent cleaning in St. Louis City, how much does dryer vent cleaning cost in St. Louis" />
+        <meta name="description" content="Looking for dryer vent cleaning in St. Louis City? Our professional service covers all neighborhoods including Downtown, Central West End, Soulard, and Lafayette Square. Call (314) 578-8648 to schedule." data-rh="true" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -23,8 +27,10 @@ export default function StLouisCity() {
             "@type": "LocalBusiness",
             "name": "St. Louis Dryer Vent Cleaning",
             "image": "/images/dryer-vent-cleaning-service.jpg",
-            "telephone": "+1-314-555-0123",
+            "telephone": "+1-314-578-8648",
+            "email": "chrishamilton37@gmail.com",
             "priceRange": "$$",
+            "description": "Professional dryer vent cleaning services in St. Louis City, covering Downtown, Central West End, Soulard, and all neighborhoods.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "123 Main Street",
@@ -44,7 +50,19 @@ export default function StLouisCity() {
               "sameAs": "https://en.wikipedia.org/wiki/St._Louis"
             },
             "url": "https://stlouisdryerventcleaning.com/service-areas/st-louis-city",
-            "openingHours": "Mo-Sa 08:00-18:00"
+            "openingHours": "Mo-Fr 08:00-18:00 Sa 09:00-16:00",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "serviceQuality",
+                "value": "Professional"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "serviceFrequency",
+                "value": "Annual recommended"
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -203,7 +221,7 @@ export default function StLouisCity() {
                 
                 <div className="border-t pt-4">
                   <Button className="w-full" size="lg" asChild>
-                    <a href="tel:314-555-0123">Call (314) 555-0123</a>
+                    <a href="tel:314-578-8648">Call (314) 578-8648</a>
                   </Button>
                 </div>
               </CardContent>

@@ -4,10 +4,93 @@ import TestimonialSection from "@/components/TestimonialSection";
 import ContactForm from "@/components/ContactForm";
 import FAQ from "@/components/FAQ";
 import { Card } from "@/components/ui/card";
+import SEO from "@/lib/seo";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
     <div>
+      <SEO>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "St. Louis Dryer Vent Cleaning",
+            "image": "/images/dryer-vent-cleaning-service.jpg",
+            "@id": "https://stlouisdryerventcleaning.com",
+            "url": "https://stlouisdryerventcleaning.com",
+            "telephone": "+1-314-578-8648",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "123 Main Street",
+              "addressLocality": "St. Louis",
+              "addressRegion": "MO",
+              "postalCode": "63101",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.6270,
+              "longitude": -90.1994
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "St. Louis City",
+                "sameAs": "https://en.wikipedia.org/wiki/St._Louis"
+              },
+              {
+                "@type": "County",
+                "name": "St. Louis County",
+                "sameAs": "https://en.wikipedia.org/wiki/St._Louis_County,_Missouri"
+              },
+              {
+                "@type": "County",
+                "name": "St. Clair County",
+                "addressRegion": "IL",
+                "sameAs": "https://en.wikipedia.org/wiki/St._Clair_County,_Illinois"
+              }
+            ],
+            "openingHours": "Mo-Fr 08:00-18:00 Sa 09:00-16:00",
+            "sameAs": [
+              "https://facebook.com/stlouisdryerventcleaning",
+              "https://instagram.com/stlouisdryerventcleaning",
+              "https://nextdoor.com/pages/stlouisdryerventcleaning"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Dryer Vent Cleaning Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Residential Dryer Vent Cleaning",
+                    "description": "Complete cleaning of dryer vents in residential homes to prevent fire hazards and improve efficiency."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Dryer Vent Inspection",
+                    "description": "Professional inspection of dryer vent systems to identify potential issues."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Commercial Dryer Vent Service",
+                    "description": "Specialized cleaning for commercial laundry facilities and multi-unit buildings."
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+      </SEO>
       <Hero />
       <Services />
 
