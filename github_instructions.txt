@@ -1,0 +1,38 @@
+# Instructions for pushing your code to GitHub
+
+Since we're having issues with Git authentication through Replit, here's how to push your code from your local machine:
+
+## Option 1: Download the ZIP and push from your computer
+
+1. Download the "st-louis-dryer-vent-cleaning.zip" file that was created
+2. Extract the ZIP file on your local computer
+3. Open a terminal/command prompt and navigate to the extracted folder
+4. Run these commands:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/chrishamcode/st-louis-dryer-vent-cleaning.git
+git push -u origin main
+```
+
+## Option 2: Clone the empty repository and add files
+
+1. Clone your empty GitHub repository:
+```bash
+git clone https://github.com/chrishamcode/st-louis-dryer-vent-cleaning.git
+cd st-louis-dryer-vent-cleaning
+```
+
+2. Download the ZIP file from Replit
+3. Extract the contents into your cloned repository folder
+4. Add, commit, and push:
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+This will push all the code to your GitHub repository.
