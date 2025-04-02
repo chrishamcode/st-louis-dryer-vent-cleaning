@@ -83,7 +83,7 @@ export default function BookService() {
 
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-center text-4xl font-bold mb-8">Book Your Service</h1>
+          <h1 className="text-center text-4xl font-bold mb-8 tracking-tight text-gray-900">Book Your Service</h1>
 
           <div className="mx-auto max-w-2xl mb-8">
             <div className="mb-2 flex justify-between text-sm">

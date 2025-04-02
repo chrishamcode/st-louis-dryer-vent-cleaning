@@ -118,8 +118,8 @@ export default function ServiceAreas() {
     <div className="py-16">
       <ServiceAreasSEO />
       <div className="container mx-auto px-4">
-        <h1 className="mb-8 text-center text-4xl font-bold">Service Areas</h1>
-        <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
+        <h1 className="mb-8 text-center text-4xl font-bold tracking-tight text-gray-900">Service Areas</h1>
+        <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600 text-lg">
           We provide professional dryer vent cleaning services throughout the
           greater St. Louis metropolitan area.
         </p>
