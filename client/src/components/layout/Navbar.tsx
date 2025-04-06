@@ -53,14 +53,18 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white shadow-md py-3' 
-          : 'bg-transparent backdrop-blur-sm bg-opacity-70 py-5'
+          : 'bg-black/40 py-5'
       }`} 
       aria-label="Main navigation"
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link 
           href="/" 
-          className={`text-xl font-bold ${scrolled ? 'text-primary' : 'text-white'}`}
+          className={`text-xl font-bold ${
+            scrolled 
+              ? 'text-primary' 
+              : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]'
+          }`}
         >
           St. Louis Dryer Vent Cleaning
         </Link>
@@ -126,24 +130,30 @@ export default function Navbar() {
           <div className="flex space-x-6 mr-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors ${
-                scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-gray-200'
+              className={`font-semibold transition-colors ${
+                scrolled 
+                  ? 'text-gray-800 hover:text-primary' 
+                  : 'text-white hover:text-gray-200 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]'
               }`}
             >
               Home
             </Link>
             <Link 
               href="/service-areas" 
-              className={`font-medium transition-colors ${
-                scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-gray-200'
+              className={`font-semibold transition-colors ${
+                scrolled 
+                  ? 'text-gray-800 hover:text-primary' 
+                  : 'text-white hover:text-gray-200 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]'
               }`}
             >
               Service Areas
             </Link>
             <Link 
               href="/contact" 
-              className={`font-medium transition-colors ${
-                scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-gray-200'
+              className={`font-semibold transition-colors ${
+                scrolled 
+                  ? 'text-gray-800 hover:text-primary' 
+                  : 'text-white hover:text-gray-200 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]'
               }`}
             >
               Contact
@@ -153,10 +163,10 @@ export default function Navbar() {
           <div className="flex items-center space-x-3">
             <a 
               href="tel:+13146326526" 
-              className={`flex items-center px-4 py-2 rounded-md transition-colors ${
+              className={`flex items-center px-4 py-2 rounded-md transition-colors font-medium ${
                 scrolled 
                   ? 'text-primary hover:bg-gray-100' 
-                  : 'text-white hover:bg-white/10'
+                  : 'text-white hover:bg-white/10 drop-shadow-[0_2px_3px_rgba(0,0,0,0.9)]'
               }`}
             >
               <Phone className="mr-2 h-4 w-4" />
