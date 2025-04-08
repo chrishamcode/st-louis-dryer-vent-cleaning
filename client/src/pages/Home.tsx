@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import TestimonialSection from "@/components/TestimonialSection";
-import ContactForm from "@/components/ContactForm";
+import ContactCTA from "@/components/ContactCTA";
 import FAQ2 from "@/components/FAQ2";
 import { Card } from "@/components/ui/card";
 import SEO from "@/lib/seo";
@@ -149,14 +149,11 @@ export default function Home() {
       
       <FAQ2 />
 
-      <section className="bg-primary/5 py-16" id="contact-form">
+      <section className="bg-primary/5 py-16" id="contact-cta">
         <div className="container mx-auto px-4">
-          <Card className="mx-auto max-w-2xl p-6">
-            <h2 className="mb-6 text-center text-2xl font-bold">
-              Schedule Your Cleaning
-            </h2>
-            <ContactForm />
-          </Card>
+          <div className="mx-auto max-w-3xl">
+            <ContactCTA />
+          </div>
         </div>
       </section>
     </div>
