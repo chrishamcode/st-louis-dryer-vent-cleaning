@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="flex items-center">
                 <Medal className="h-4 w-4 mr-2 text-amber-300" />
                 <span className="animate-pulse inline-block h-2 w-2 rounded-full bg-white mr-2"></span>
-                Locally Owned & Operated in St. Louis Since 2018
+                Locally Owned & Operated in St. Louis
               </div>
             </div>
             
@@ -80,7 +80,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white border border-white/20">
                 <Users className="h-3.5 w-3.5 text-amber-300" />
-                <span>1,500+ happy customers</span>
+                <span>Trusted by homeowners</span>
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white border border-white/20">
                 <ThumbsUp className="h-3.5 w-3.5 text-amber-300" />

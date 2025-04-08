@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-3 md:mb-0">
               <Shield className="w-5 h-5 mr-2" />
-              <span className="font-medium">Locally Owned & Operated Since 2018</span>
+              <span className="font-medium">Locally Owned & Operated</span>
             </div>
             <div className="flex space-x-4">
               <a 
