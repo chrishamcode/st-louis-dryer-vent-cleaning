@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
+import { HelpCircle, AlertTriangle, Clock, Zap, Flame, Settings, Award, Info } from "lucide-react";
 
 export default function FAQ() {
   // Structured data for FAQ schema
@@ -62,8 +63,9 @@ export default function FAQ() {
       }
     ]
   };
+  
   return (
-    <section className="bg-white py-16" aria-labelledby="faq-heading">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-20" aria-labelledby="faq-heading">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -71,117 +73,381 @@ export default function FAQ() {
       </Helmet>
       
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center mb-12">
+          <div className="inline-block mb-4">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-full">
+              <HelpCircle className="h-8 w-8 text-primary" />
+            </div>
+          </div>
+          
           <h2 
             id="faq-heading" 
-            className="text-3xl font-bold tracking-tight text-gray-900 mb-2"
+            className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4"
           >
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 mb-10">
-            Learn more about our dryer vent cleaning services
+          
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Learn more about our dryer vent cleaning services and why they're essential for your home's safety and efficiency
           </p>
         </div>
         
         <div className="mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="what-is-dryer-vent-cleaning">
-              <AccordionTrigger className="text-left font-medium">
-                What is dryer vent cleaning?
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="what-is-dryer-vent-cleaning" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <Info className="h-5 w-5 mr-3 text-primary flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    What is dryer vent cleaning?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                Dryer vent cleaning is the process of removing lint, debris, and blockages from your dryer's ventilation system. 
-                This includes the duct that runs from your dryer to the outside of your home, which over time can become clogged 
-                with lint that escapes your dryer's lint trap. Our professional service uses specialized tools including 
-                high-powered vacuum systems and rotary brushes to thoroughly clean the entire vent path.
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  Dryer vent cleaning is the process of removing lint, debris, and blockages from your dryer's ventilation system. 
+                  This includes the duct that runs from your dryer to the outside of your home, which over time can become clogged 
+                  with lint that escapes your dryer's lint trap. Our professional service uses specialized tools including 
+                  high-powered vacuum systems and rotary brushes to thoroughly clean the entire vent path.
+                </div>
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="why-is-dryer-vent-cleaning-necessary">
-              <AccordionTrigger className="text-left font-medium">
-                Why is dryer vent cleaning necessary?
+            <AccordionItem value="why-is-dryer-vent-cleaning-necessary" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <AlertTriangle className="h-5 w-5 mr-3 text-amber-500 flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    Why is dryer vent cleaning necessary?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                <p className="mb-2">
-                  Dryer vent cleaning is essential for several important reasons:
-                </p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li><span className="font-medium">Fire Prevention:</span> Lint is highly flammable, and according to the U.S. Fire Administration, 
-                  there are approximately 2,900 home dryer fires reported each year, causing an estimated 5 deaths, 100 injuries, and $35 million in property loss.</li>
-                  <li><span className="font-medium">Energy Efficiency:</span> A clogged vent forces your dryer to work harder and run longer, increasing energy consumption and utility bills.</li>
-                  <li><span className="font-medium">Extended Appliance Life:</span> Regular cleaning helps prevent overheating and unnecessary wear on your dryer components.</li>
-                  <li><span className="font-medium">Reduced Drying Time:</span> Clean vents allow proper airflow, helping clothes dry faster.</li>
-                  <li><span className="font-medium">Health Benefits:</span> Prevents mold growth and improves indoor air quality by reducing humidity and trapped particles.</li>
-                </ul>
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  <p className="mb-3">
+                    Dryer vent cleaning is essential for several important reasons:
+                  </p>
+                  <div className="space-y-4">
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="flex-shrink-0">
+                          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100">
+                            <Flame className="h-5 w-5 text-red-600" />
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="text-base font-medium text-gray-900">Fire Prevention</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            Lint is highly flammable, and according to the U.S. Fire Administration, 
+                            there are approximately 2,900 home dryer fires reported each year, causing an estimated 
+                            5 deaths, 100 injuries, and $35 million in property loss.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="flex-shrink-0">
+                          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                            <Zap className="h-5 w-5 text-green-600" />
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="text-base font-medium text-gray-900">Energy Efficiency</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            A clogged vent forces your dryer to work harder and run longer, increasing energy consumption and utility bills.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="flex-shrink-0">
+                          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100">
+                            <Settings className="h-5 w-5 text-blue-600" />
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="text-base font-medium text-gray-900">Extended Appliance Life</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            Regular cleaning helps prevent overheating and unnecessary wear on your dryer components,
+                            potentially adding years to your appliance's lifespan.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="how-often-should-dryer-vents-be-cleaned">
-              <AccordionTrigger className="text-left font-medium">
-                How often should dryer vents be cleaned?
+            <AccordionItem value="how-often-should-dryer-vents-be-cleaned" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <Clock className="h-5 w-5 mr-3 text-cyan-500 flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    How often should dryer vents be cleaned?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                The National Fire Protection Association recommends that dryer vents be inspected and cleaned at least once per year.
-                However, if you notice any warning signs like longer drying times, burning smells, excessive heat from the dryer, 
-                or lint visible around the vent opening, you should schedule a cleaning immediately. Households with high laundry 
-                volume, homes with pets, or vents with longer or more complex ductwork may require more frequent cleanings.
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-4">
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <AlertTriangle className="h-5 w-5 text-amber-400" />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-amber-700">
+                          The National Fire Protection Association recommends that dryer vents be inspected and cleaned at least once per year.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="mb-4">
+                    However, if you notice any warning signs like longer drying times, burning smells, excessive heat from the dryer, 
+                    or lint visible around the vent opening, you should schedule a cleaning immediately.
+                  </p>
+                  
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h4 className="text-base font-medium text-gray-900 mb-2">You may need more frequent cleanings if you have:</h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                      <li className="flex items-center">
+                        <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
+                        High laundry volume
+                      </li>
+                      <li className="flex items-center">
+                        <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
+                        Pets in the home
+                      </li>
+                      <li className="flex items-center">
+                        <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
+                        Long or complex ductwork
+                      </li>
+                      <li className="flex items-center">
+                        <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
+                        Multiple residents/large family
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="how-is-dryer-vent-cleaning-performed">
-              <AccordionTrigger className="text-left font-medium">
-                How is dryer vent cleaning performed?
+            <AccordionItem value="how-is-dryer-vent-cleaning-performed" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <Settings className="h-5 w-5 mr-3 text-gray-500 flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    How is dryer vent cleaning performed?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                <p className="mb-2">Our professional dryer vent cleaning process includes:</p>
-                <ol className="list-decimal pl-5 space-y-1">
-                  <li><span className="font-medium">Inspection:</span> We thoroughly examine your dryer vent system to assess its condition and identify any issues.</li>
-                  <li><span className="font-medium">Disconnect:</span> Your dryer is carefully disconnected and moved to access the vent.</li>
-                  <li><span className="font-medium">Cleaning:</span> Using professional-grade equipment, we remove lint and debris from the entire duct system.</li>
-                  <li><span className="font-medium">Rotary Brushing:</span> A specialized rotating brush system is used to scrub the interior walls of the ductwork.</li>
-                  <li><span className="font-medium">High-Powered Vacuum:</span> Industrial-strength vacuum equipment extracts all loosened debris.</li>
-                  <li><span className="font-medium">Exterior Vent Check:</span> We clean the outside vent opening and ensure it operates properly.</li>
-                  <li><span className="font-medium">Reconnection:</span> Your dryer is reconnected and tested for proper airflow.</li>
-                  <li><span className="font-medium">Final Inspection:</span> We confirm that the entire system is clean and functioning correctly.</li>
-                </ol>
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  <p className="mb-4">Our professional dryer vent cleaning process follows these comprehensive steps:</p>
+                  
+                  <div className="space-y-3">
+                    {[
+                      {
+                        title: "Inspection",
+                        description: "We thoroughly examine your dryer vent system to assess its condition and identify any issues."
+                      },
+                      {
+                        title: "Disconnect",
+                        description: "Your dryer is carefully disconnected and moved to access the vent."
+                      },
+                      {
+                        title: "Cleaning",
+                        description: "Using professional-grade equipment, we remove lint and debris from the entire duct system."
+                      },
+                      {
+                        title: "Rotary Brushing",
+                        description: "A specialized rotating brush system is used to scrub the interior walls of the ductwork."
+                      },
+                      {
+                        title: "High-Powered Vacuum",
+                        description: "Industrial-strength vacuum equipment extracts all loosened debris."
+                      },
+                      {
+                        title: "Exterior Vent Check",
+                        description: "We clean the outside vent opening and ensure it operates properly."
+                      },
+                      {
+                        title: "Reconnection",
+                        description: "Your dryer is reconnected and tested for proper airflow."
+                      },
+                      {
+                        title: "Final Inspection",
+                        description: "We confirm that the entire system is clean and functioning correctly."
+                      }
+                    ].map((step, index) => (
+                      <div key={index} className="flex">
+                        <div className="flex-shrink-0">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                            {index + 1}
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="text-base font-medium text-gray-900">{step.title}</h4>
+                          <p className="mt-1 text-sm text-gray-600">{step.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="why-choose-us">
-              <AccordionTrigger className="text-left font-medium">
-                Why choose St. Louis Dryer Vent Cleaning?
+            <AccordionItem value="why-choose-us" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <Award className="h-5 w-5 mr-3 text-amber-500 flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    Why choose St. Louis Dryer Vent Cleaning?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                <ul className="list-disc pl-5 space-y-2">
-                  <li><span className="font-medium">Local Expertise:</span> We specialize in the unique needs of St. Louis area homes and have extensive knowledge of local building styles and vent configurations.</li>
-                  <li><span className="font-medium">Certified Technicians:</span> Our technicians are professionally trained and certified in proper dryer vent cleaning techniques.</li>
-                  <li><span className="font-medium">Comprehensive Service:</span> We don't just clean visible lint—we thoroughly clean the entire vent system from dryer to exterior.</li>
-                  <li><span className="font-medium">Advanced Equipment:</span> We use professional-grade tools that are more effective than DIY approaches.</li>
-                  <li><span className="font-medium">Satisfaction Guarantee:</span> We stand behind our work with a 100% satisfaction guarantee.</li>
-                  <li><span className="font-medium">Transparent Pricing:</span> We provide clear, upfront pricing with no hidden fees or surprise charges.</li>
-                  <li><span className="font-medium">Flexible Scheduling:</span> We offer convenient appointment times that work with your schedule.</li>
-                </ul>
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        Local Expertise
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We specialize in the unique needs of St. Louis area homes and have extensive knowledge 
+                        of local building styles and vent configurations.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        Certified Technicians
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        Our technicians are professionally trained and certified in proper dryer vent cleaning techniques.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        Comprehensive Service
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We don't just clean visible lint—we thoroughly clean the entire vent system from dryer to exterior.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        Advanced Equipment
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We use professional-grade tools that are more effective than DIY approaches.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        100% Satisfaction Guarantee
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We stand behind our work with a 100% satisfaction guarantee on all our services.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
+                        <span className="mr-2 text-primary">★</span>
+                        Transparent Pricing
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We provide clear, upfront pricing with no hidden fees or surprise charges.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="signs-of-clogged-dryer-vent">
-              <AccordionTrigger className="text-left font-medium">
-                What are the signs that my dryer vent needs cleaning?
+            <AccordionItem value="signs-of-clogged-dryer-vent" className="border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <AccordionTrigger className="text-left font-medium px-6 py-4 bg-white hover:bg-gray-50 group">
+                <div className="flex items-center">
+                  <AlertTriangle className="h-5 w-5 mr-3 text-red-500 flex-shrink-0" />
+                  <span className="text-gray-800 text-lg group-hover:text-primary transition-colors">
+                    What are the signs that my dryer vent needs cleaning?
+                  </span>
+                </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                Look out for these warning signs:
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Clothes take longer than usual to dry</li>
-                  <li>The dryer or your laundry feels unusually hot</li>
-                  <li>Burning smell when the dryer is running</li>
-                  <li>Visible lint accumulation around the dryer hose or exterior vent opening</li>
-                  <li>The dryer automatically shuts off before clothes are dry (due to overheating)</li>
-                  <li>It's been more than a year since your last cleaning</li>
-                  <li>Excessive humidity in the laundry room when the dryer is running</li>
-                </ul>
+              <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <div className="pl-8">
+                  <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <AlertTriangle className="h-5 w-5 text-red-400" />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-red-700">
+                          If you notice any of these warning signs, your dryer vent likely needs immediate attention to prevent fire hazards and improve efficiency.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "Clothes take longer than usual to dry",
+                      "The dryer or your laundry feels unusually hot",
+                      "Burning smell when the dryer is running",
+                      "Visible lint accumulation around the dryer hose or exterior vent opening",
+                      "The dryer automatically shuts off before clothes are dry (due to overheating)",
+                      "It's been more than a year since your last cleaning",
+                      "Excessive humidity in the laundry room when the dryer is running",
+                      "Your clothes have a musty smell after drying"
+                    ].map((sign, index) => (
+                      <div key={index} className="flex items-start bg-white p-3 rounded border border-gray-200">
+                        <div className="flex-shrink-0 text-red-500 mr-2">
+                          <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-sm">{sign}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+          
+          <div className="mt-10 text-center">
+            <p className="text-gray-700 mb-6">
+              Still have questions about our dryer vent cleaning services?
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="tel:+13146326526" 
+                className="inline-flex items-center px-6 py-3 border border-primary text-primary bg-white hover:bg-primary/5 rounded-lg font-medium transition-colors"
+              >
+                Call Us: (314) 632-6526
+              </a>
+              <a 
+                href="#contact-form" 
+                className="inline-flex items-center px-6 py-3 bg-primary text-white hover:bg-primary-dark rounded-lg font-medium transition-colors"
+              >
+                Contact Us Online
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
