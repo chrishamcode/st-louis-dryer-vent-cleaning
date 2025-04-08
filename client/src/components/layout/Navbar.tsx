@@ -58,7 +58,7 @@ export default function Navbar() {
       style={{
         background: scrolled 
           ? '' 
-          : 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)'
+          : 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,0) 100%)'
       }}
       aria-label="Main navigation"
     >
@@ -68,7 +68,7 @@ export default function Navbar() {
           className={`text-xl font-bold ${
             scrolled 
               ? 'text-primary' 
-              : 'text-white font-extrabold'
+              : 'text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]'
           }`}
         >
           St. Louis Dryer Vent Cleaning
@@ -81,7 +81,7 @@ export default function Navbar() {
               className={`mobile-menu-button ${
                 scrolled 
                   ? 'text-gray-700 hover:bg-gray-100' 
-                  : 'text-white hover:bg-white/10'
+                  : 'text-white hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
               }`}
               aria-label="Open menu"
             >
@@ -138,7 +138,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold'
+                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
               }`}
             >
               Home
@@ -148,7 +148,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold'
+                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
               }`}
             >
               Service Areas
@@ -158,7 +158,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold'
+                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
               }`}
             >
               Contact
@@ -171,7 +171,7 @@ export default function Navbar() {
               className={`flex items-center px-4 py-2 rounded-md transition-colors font-medium ${
                 scrolled 
                   ? 'text-primary hover:bg-gray-100 font-semibold' 
-                  : 'text-white hover:bg-white/10 font-bold'
+                  : 'text-white hover:bg-white/10 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
               }`}
             >
               <Phone className="mr-2 h-4 w-4" />
