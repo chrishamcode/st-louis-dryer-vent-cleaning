@@ -300,19 +300,101 @@ export default function FAQ() {
                   <p className="mb-4">Our professional dryer vent cleaning process follows these comprehensive steps:</p>
                   
                   <div className="space-y-3">
-                    {cleaningSteps.map((step, index) => (
-                      <div key={index} className="flex">
-                        <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
-                            {index + 1}
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <h4 className="text-base font-medium text-gray-900">{step.title}</h4>
-                          <p className="mt-1 text-sm text-gray-600">{step.description}</p>
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          1
                         </div>
                       </div>
-                    ))}
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Inspection</h4>
+                        <p className="mt-1 text-sm text-gray-600">We thoroughly examine your dryer vent system to assess its condition and identify any issues.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          2
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Disconnect</h4>
+                        <p className="mt-1 text-sm text-gray-600">Your dryer is carefully disconnected and moved to access the vent.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          3
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Cleaning</h4>
+                        <p className="mt-1 text-sm text-gray-600">Using professional-grade equipment, we remove lint and debris from the entire duct system.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          4
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Rotary Brushing</h4>
+                        <p className="mt-1 text-sm text-gray-600">A specialized rotating brush system is used to scrub the interior walls of the ductwork.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          5
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">High-Powered Vacuum</h4>
+                        <p className="mt-1 text-sm text-gray-600">Industrial-strength vacuum equipment extracts all loosened debris.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          6
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Exterior Vent Check</h4>
+                        <p className="mt-1 text-sm text-gray-600">We clean the outside vent opening and ensure it operates properly.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          7
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Reconnection</h4>
+                        <p className="mt-1 text-sm text-gray-600">Your dryer is reconnected and tested for proper airflow.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
+                          8
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-base font-medium text-gray-900">Final Inspection</h4>
+                        <p className="mt-1 text-sm text-gray-600">We confirm that the entire system is clean and functioning correctly.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </AccordionContent>
@@ -412,16 +494,77 @@ export default function FAQ() {
                   <p className="mb-4">Look out for these warning signs that indicate it's time for a professional dryer vent cleaning:</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {warningSignsList.map((sign, index) => (
-                      <div key={index} className="flex items-start bg-white p-3 rounded border border-gray-200">
-                        <div className="flex-shrink-0 text-red-500 mr-2">
-                          <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-sm">{sign}</span>
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
                       </div>
-                    ))}
+                      <span className="text-sm">Clothes take longer than usual to dry</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">The dryer or your laundry feels unusually hot</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">Burning smell when the dryer is running</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">Visible lint accumulation around the dryer hose</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">The dryer automatically shuts off before clothes are dry</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">It's been more than a year since your last cleaning</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">Excessive humidity in the laundry room</span>
+                    </div>
+                    
+                    <div className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <div className="flex-shrink-0 text-red-500 mr-2">
+                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-sm">Your clothes have a musty smell after drying</span>
+                    </div>
                   </div>
                 </div>
               </AccordionContent>
