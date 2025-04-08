@@ -53,13 +53,8 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white shadow-md py-3' 
-          : 'py-5'
+          : 'bg-black/80 backdrop-blur-sm py-4'
       }`} 
-      style={{
-        background: scrolled 
-          ? '' 
-          : 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,0) 100%)'
-      }}
       aria-label="Main navigation"
     >
       <div className="container mx-auto flex items-center justify-between px-4">
@@ -68,7 +63,7 @@ export default function Navbar() {
           className={`text-xl font-bold ${
             scrolled 
               ? 'text-primary' 
-              : 'text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]'
+              : 'text-white font-extrabold'
           }`}
         >
           St. Louis Dryer Vent Cleaning
@@ -81,7 +76,7 @@ export default function Navbar() {
               className={`mobile-menu-button ${
                 scrolled 
                   ? 'text-gray-700 hover:bg-gray-100' 
-                  : 'text-white hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : 'text-white hover:bg-white/10'
               }`}
               aria-label="Open menu"
             >
@@ -138,7 +133,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : 'text-white hover:text-gray-200 font-bold'
               }`}
             >
               Home
@@ -148,7 +143,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : 'text-white hover:text-gray-200 font-bold'
               }`}
             >
               Service Areas
@@ -158,7 +153,7 @@ export default function Navbar() {
               className={`transition-colors ${
                 scrolled 
                   ? 'text-gray-800 hover:text-primary font-semibold' 
-                  : 'text-white hover:text-gray-200 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : 'text-white hover:text-gray-200 font-bold'
               }`}
             >
               Contact
@@ -171,7 +166,7 @@ export default function Navbar() {
               className={`flex items-center px-4 py-2 rounded-md transition-colors font-medium ${
                 scrolled 
                   ? 'text-primary hover:bg-gray-100 font-semibold' 
-                  : 'text-white hover:bg-white/10 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : 'text-white hover:bg-white/10 font-bold'
               }`}
             >
               <Phone className="mr-2 h-4 w-4" />
