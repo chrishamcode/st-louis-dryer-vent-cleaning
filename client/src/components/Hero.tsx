@@ -146,8 +146,8 @@ export default function Hero() {
                 </div>
               </a>
               <a 
-                href="#contact-form"
-                aria-label="Schedule service - opens contact form"
+                href="#contact-cta"
+                aria-label="Schedule service - opens contact options"
                 className="group bg-gradient-to-r from-primary to-primary-dark border border-white/10 text-white font-semibold py-5 px-7 w-full sm:w-auto rounded-xl shadow-lg text-center transition-all hover:shadow-xl hover:scale-105 flex items-center justify-center gap-3"
               >
                 <div className="bg-white/10 rounded-full p-2 group-hover:bg-white/20 transition-colors">

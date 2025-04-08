@@ -115,7 +115,7 @@ export default function Navbar() {
               </a>
               
               <Link 
-                href="#contact-form" 
+                href="#contact-cta" 
                 className="mobile-menu-cta bg-primary text-white"
               >
                 <Calendar />
@@ -173,7 +173,7 @@ export default function Navbar() {
               (314) 632-6526
             </a>
             
-            <Link href="#contact-form" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center">
+            <Link href="#contact-cta" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center">
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Service
             </Link>

@@ -150,7 +150,7 @@ export default function Footer() {
                     <MessageSquare className="w-3.5 h-3.5 mr-1.5" />
                     Contact
                   </Link>
-                  <Link href="#contact-form" className="text-gray-400 hover:text-primary transition-colors text-sm flex items-center">
+                  <Link href="#contact-cta" className="text-gray-400 hover:text-primary transition-colors text-sm flex items-center">
                     <Calendar className="w-3.5 h-3.5 mr-1.5" />
                     Schedule Service
                   </Link>

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { AlertCircle, MapPin, CheckCircle, Users, ArrowRight } from "lucide-react";
 import { useGeolocation, calculateDistance, serviceAreaCoordinates, zipToAreaMapping } from "@/hooks/use-geolocation";
-import ContactForm from "@/components/ContactForm";
+import ContactCTA from "@/components/ContactCTA";
 import { ServiceAreasSEO } from "@/lib/seo";
 
 export default function ServiceAreas() {
@@ -250,12 +250,9 @@ export default function ServiceAreas() {
         </div>
 
         <div className="mt-16">
-          <Card className="mx-auto max-w-2xl p-6">
-            <h2 className="mb-6 text-center text-2xl font-bold">
-              Schedule a Cleaning in Your Area
-            </h2>
-            <ContactForm />
-          </Card>
+          <div className="mx-auto max-w-3xl">
+            <ContactCTA />
+          </div>
         </div>
       </div>
     </div>
