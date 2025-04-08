@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import TestimonialSection from "@/components/TestimonialSection";
 import ContactForm from "@/components/ContactForm";
-import FAQ from "@/components/FAQ";
+import FAQ2 from "@/components/FAQ2";
 import { Card } from "@/components/ui/card";
 import SEO from "@/lib/seo";
 import { Helmet } from "react-helmet";
@@ -147,7 +147,7 @@ export default function Home() {
 
       <TestimonialSection />
       
-      <FAQ />
+      <FAQ2 />
 
       <section className="bg-primary/5 py-16" id="contact-form">
         <div className="container mx-auto px-4">
