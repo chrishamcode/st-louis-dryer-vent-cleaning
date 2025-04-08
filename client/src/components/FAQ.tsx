@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -63,6 +64,54 @@ export default function FAQ() {
       }
     ]
   };
+  
+  // Cleaning process steps
+  const cleaningSteps = [
+    {
+      title: "Inspection",
+      description: "We thoroughly examine your dryer vent system to assess its condition and identify any issues."
+    },
+    {
+      title: "Disconnect",
+      description: "Your dryer is carefully disconnected and moved to access the vent."
+    },
+    {
+      title: "Cleaning",
+      description: "Using professional-grade equipment, we remove lint and debris from the entire duct system."
+    },
+    {
+      title: "Rotary Brushing",
+      description: "A specialized rotating brush system is used to scrub the interior walls of the ductwork."
+    },
+    {
+      title: "High-Powered Vacuum",
+      description: "Industrial-strength vacuum equipment extracts all loosened debris."
+    },
+    {
+      title: "Exterior Vent Check",
+      description: "We clean the outside vent opening and ensure it operates properly."
+    },
+    {
+      title: "Reconnection",
+      description: "Your dryer is reconnected and tested for proper airflow."
+    },
+    {
+      title: "Final Inspection",
+      description: "We confirm that the entire system is clean and functioning correctly."
+    }
+  ];
+
+  // Warning signs
+  const warningSignsList = [
+    "Clothes take longer than usual to dry",
+    "The dryer or your laundry feels unusually hot",
+    "Burning smell when the dryer is running",
+    "Visible lint accumulation around the dryer hose or exterior vent opening",
+    "The dryer automatically shuts off before clothes are dry (due to overheating)",
+    "It's been more than a year since your last cleaning",
+    "Excessive humidity in the laundry room when the dryer is running",
+    "Your clothes have a musty smell after drying"
+  ];
   
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-20" aria-labelledby="faq-heading">
@@ -251,40 +300,7 @@ export default function FAQ() {
                   <p className="mb-4">Our professional dryer vent cleaning process follows these comprehensive steps:</p>
                   
                   <div className="space-y-3">
-                    {[
-                      {
-                        title: "Inspection",
-                        description: "We thoroughly examine your dryer vent system to assess its condition and identify any issues."
-                      },
-                      {
-                        title: "Disconnect",
-                        description: "Your dryer is carefully disconnected and moved to access the vent."
-                      },
-                      {
-                        title: "Cleaning",
-                        description: "Using professional-grade equipment, we remove lint and debris from the entire duct system."
-                      },
-                      {
-                        title: "Rotary Brushing",
-                        description: "A specialized rotating brush system is used to scrub the interior walls of the ductwork."
-                      },
-                      {
-                        title: "High-Powered Vacuum",
-                        description: "Industrial-strength vacuum equipment extracts all loosened debris."
-                      },
-                      {
-                        title: "Exterior Vent Check",
-                        description: "We clean the outside vent opening and ensure it operates properly."
-                      },
-                      {
-                        title: "Reconnection",
-                        description: "Your dryer is reconnected and tested for proper airflow."
-                      },
-                      {
-                        title: "Final Inspection",
-                        description: "We confirm that the entire system is clean and functioning correctly."
-                      }
-                    ].map((step, index) => (
+                    {cleaningSteps.map((step, index) => (
                       <div key={index} className="flex">
                         <div className="flex-shrink-0">
                           <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold">
@@ -313,68 +329,71 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
                 <div className="pl-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        Local Expertise
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        We specialize in the unique needs of St. Louis area homes and have extensive knowledge 
-                        of local building styles and vent configurations.
-                      </p>
-                    </div>
+                  <ul className="space-y-4">
+                    <li className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="mr-3 text-primary">
+                          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-gray-900">Locally Owned & Operated</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            We are proud to be a local St. Louis business, deeply familiar with the homes and architecture in our area.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
                     
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        Certified Technicians
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        Our technicians are professionally trained and certified in proper dryer vent cleaning techniques.
-                      </p>
-                    </div>
+                    <li className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="mr-3 text-primary">
+                          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-gray-900">Certified Technicians</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            Our technicians are fully trained, certified, and experienced in the latest dryer vent cleaning techniques.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
                     
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        Comprehensive Service
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        We don't just clean visible lint—we thoroughly clean the entire vent system from dryer to exterior.
-                      </p>
-                    </div>
+                    <li className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="mr-3 text-primary">
+                          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-gray-900">Comprehensive Service</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            We clean your entire vent system from the dryer to the exterior vent, not just the accessible portions.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
                     
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        Advanced Equipment
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        We use professional-grade tools that are more effective than DIY approaches.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        100% Satisfaction Guarantee
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        We stand behind our work with a 100% satisfaction guarantee on all our services.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                      <h4 className="text-base font-medium text-gray-900 flex items-center mb-2">
-                        <span className="mr-2 text-primary">★</span>
-                        Transparent Pricing
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        We provide clear, upfront pricing with no hidden fees or surprise charges.
-                      </p>
-                    </div>
-                  </div>
+                    <li className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex">
+                        <div className="mr-3 text-primary">
+                          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-gray-900">Satisfaction Guaranteed</h4>
+                          <p className="mt-1 text-sm text-gray-600">
+                            We stand behind our work with a 100% satisfaction guarantee on every service.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -390,30 +409,10 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent className="text-gray-600 px-6 py-4 bg-gray-50 border-t border-gray-200">
                 <div className="pl-8">
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
-                    <div className="flex">
-                      <div className="flex-shrink-0">
-                        <AlertTriangle className="h-5 w-5 text-red-400" />
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm text-red-700">
-                          If you notice any of these warning signs, your dryer vent likely needs immediate attention to prevent fire hazards and improve efficiency.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <p className="mb-4">Look out for these warning signs that indicate it's time for a professional dryer vent cleaning:</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {[
-                      "Clothes take longer than usual to dry",
-                      "The dryer or your laundry feels unusually hot",
-                      "Burning smell when the dryer is running",
-                      "Visible lint accumulation around the dryer hose or exterior vent opening",
-                      "The dryer automatically shuts off before clothes are dry (due to overheating)",
-                      "It's been more than a year since your last cleaning",
-                      "Excessive humidity in the laundry room when the dryer is running",
-                      "Your clothes have a musty smell after drying"
-                    ].map((sign, index) => (
+                    {warningSignsList.map((sign, index) => (
                       <div key={index} className="flex items-start bg-white p-3 rounded border border-gray-200">
                         <div className="flex-shrink-0 text-red-500 mr-2">
                           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -428,26 +427,6 @@ export default function FAQ() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          
-          <div className="mt-10 text-center">
-            <p className="text-gray-700 mb-6">
-              Still have questions about our dryer vent cleaning services?
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="tel:+13146326526" 
-                className="inline-flex items-center px-6 py-3 border border-primary text-primary bg-white hover:bg-primary/5 rounded-lg font-medium transition-colors"
-              >
-                Call Us: (314) 632-6526
-              </a>
-              <a 
-                href="#contact-form" 
-                className="inline-flex items-center px-6 py-3 bg-primary text-white hover:bg-primary-dark rounded-lg font-medium transition-colors"
-              >
-                Contact Us Online
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
