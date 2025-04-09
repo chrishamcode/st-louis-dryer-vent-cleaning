@@ -26,9 +26,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Close mobile menu when clicking on a link (improves UX)
+  // Close mobile menu when clicking on a link and scroll to top
   const handleMobileNavClick = () => {
     setMobileMenuOpen(false);
+    
+    // Scroll to the top of the page when navigating to a new page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    // Additional fix for some mobile browsers
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   };
 
   return (
@@ -68,7 +79,11 @@ export default function Navbar() {
             <Menu className="h-6 w-6" />
           </button>
           
-          <Dialog open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <Dialog 
+            open={mobileMenuOpen} 
+            onOpenChange={setMobileMenuOpen}
+            modal={false}
+          >
             <DialogContent 
               className="mobile-menu fixed inset-y-0 right-0 h-full w-[80vw] max-w-[280px] 
                         rounded-l-2xl p-0 shadow-xl bg-white 
@@ -77,6 +92,12 @@ export default function Navbar() {
                         flex flex-col"
               aria-label="Mobile navigation menu"
               id="mobile-menu"
+              onOpenAutoFocus={(e) => {
+                // Prevent autofocus behavior that might scroll the page
+                e.preventDefault();
+              }}
+              onEscapeKeyDown={() => setMobileMenuOpen(false)}
+              onPointerDownOutside={() => setMobileMenuOpen(false)}
             >
               <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
               <div className="flex items-center justify-between p-4 border-b">

@@ -26,6 +26,28 @@
   animation: slide-out-right 0.3s ease-in forwards;
 }
 
+/* Override radix dialog styles for better mobile experience */
+[data-radix-popper-content-wrapper] {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  transform: none !important;
+  max-width: 100% !important;
+}
+
+/* Dialog content fixes */
+.mobile-menu {
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 100vh !important; 
+  max-height: 100vh !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  transform: translateX(0) !important;
+}
+
 /* Make sure tap targets are large enough for mobile devices */
 .mobile-menu button,
 .mobile-menu a {
