@@ -150,10 +150,20 @@ export default function Footer() {
                     <MessageSquare className="w-3.5 h-3.5 mr-1.5" />
                     Contact
                   </Link>
-                  <Link href="#contact-cta" className="text-gray-400 hover:text-primary transition-colors text-sm flex items-center">
+                  <a 
+                    href="#contact-cta" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const contactCta = document.getElementById('contact-cta');
+                      if (contactCta) {
+                        contactCta.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-gray-400 hover:text-primary transition-colors text-sm flex items-center"
+                  >
                     <Calendar className="w-3.5 h-3.5 mr-1.5" />
                     Schedule Service
-                  </Link>
+                  </a>
                 </nav>
               </div>
               
