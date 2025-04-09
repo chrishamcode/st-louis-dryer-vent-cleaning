@@ -63,7 +63,7 @@ export default function FAQ2() {
         "name": "Why choose St. Louis Dryer Vent Cleaning?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer local expertise in St. Louis area homes, certified technicians, comprehensive service cleaning the entire vent system, advanced professional equipment, 100% satisfaction guarantee, transparent pricing with no hidden fees, and flexible scheduling to accommodate your needs."
+          "text": "We offer local expertise in St. Louis area homes, experienced technicians, comprehensive service cleaning the entire vent system, advanced professional equipment, 100% satisfaction guarantee, transparent pricing with no hidden fees, and flexible scheduling to accommodate your needs."
         }
       },
       {
@@ -546,9 +546,9 @@ export default function FAQ2() {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-base font-medium text-gray-900">Certified Technicians</h4>
+                          <h4 className="text-base font-medium text-gray-900">Experienced Technicians</h4>
                           <p className="mt-1 text-sm text-gray-600">
-                            Our technicians are fully trained, certified, and experienced in the latest dryer vent cleaning techniques.
+                            Our technicians are fully trained and experienced in the latest dryer vent cleaning techniques.
                           </p>
                         </div>
                       </div>

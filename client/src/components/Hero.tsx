@@ -218,7 +218,7 @@ export default function Hero() {
                 <ShieldCheck className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">Expert Service</h3>
-              <p className="text-gray-700 mb-4">Our certified technicians use professional-grade equipment to thoroughly clean your entire vent system from the dryer to the exterior vent.</p>
+              <p className="text-gray-700 mb-4">Our experienced technicians use professional-grade equipment to thoroughly clean your entire vent system from the dryer to the exterior vent.</p>
               <div className="flex flex-col space-y-2">
                 <div className="flex items-center p-3 bg-primary/5 rounded-lg border border-primary/10">
                   <CheckCircle2 className="h-5 w-5 text-primary mr-2" />

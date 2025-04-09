@@ -19,7 +19,7 @@ export default function FAQ() {
         "name": "How much does dryer vent cleaning cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our standard dryer vent cleaning service starts at $99 as an opening special (regular price $125). This includes a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment. Factors that may affect pricing include vent length, accessibility, and the level of lint buildup. We also offer express service options for same-day scheduling and premium packages that include video inspection. All our services come with transparent pricing and no hidden fees."
+          "text": "Our professional dryer vent cleaning service is priced at $99 as a limited-time opening special (regular price $125). This all-inclusive service covers a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment. Our flat-rate pricing makes it simple and transparent to keep your home safe. The $99 special pricing is available for a limited time for both residential and commercial properties."
         }
       },
       {
@@ -59,7 +59,7 @@ export default function FAQ() {
         "name": "Why choose St. Louis Dryer Vent Cleaning?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer local expertise in St. Louis area homes, certified technicians, comprehensive service cleaning the entire vent system, advanced professional equipment, 100% satisfaction guarantee, transparent pricing with no hidden fees, and flexible scheduling to accommodate your needs."
+          "text": "We offer local expertise in St. Louis area homes, experienced technicians, comprehensive service cleaning the entire vent system, advanced professional equipment, 100% satisfaction guarantee, transparent pricing with no hidden fees, and flexible scheduling to accommodate your needs."
         }
       },
       {
@@ -507,9 +507,9 @@ export default function FAQ() {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-base font-medium text-gray-900">Certified Technicians</h4>
+                          <h4 className="text-base font-medium text-gray-900">Experienced Technicians</h4>
                           <p className="mt-1 text-sm text-gray-600">
-                            Our technicians are fully trained, certified, and experienced in the latest dryer vent cleaning techniques.
+                            Our technicians are fully trained and experienced in the latest dryer vent cleaning techniques.
                           </p>
                         </div>
                       </div>

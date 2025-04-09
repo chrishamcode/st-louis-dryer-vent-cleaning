@@ -43,16 +43,8 @@ export default function ConfirmationStep({ data, onBack }: ConfirmationStepProps
 
   const serviceTypes = {
     standard: {
-      title: "Standard Cleaning",
-      price: "$89",
-    },
-    express: {
-      title: "Express Service",
-      price: "$129",
-    },
-    premium: {
-      title: "Premium Service",
-      price: "$159",
+      title: "Professional Dryer Vent Cleaning",
+      price: "$99",
     },
   };
 
