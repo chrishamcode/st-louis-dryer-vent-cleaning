@@ -110,7 +110,7 @@ export default function Hero() {
                 <span className="w-1.5 h-1.5 rounded-full bg-white/50"></span>
                 <div className="flex items-center">
                   <CheckCircle2 className="h-4 w-4 mr-2 text-amber-300" />
-                  <span>Certified Technicians</span>
+                  <span>Experienced Technicians</span>
                 </div>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/50"></span>
                 <div className="flex items-center">
