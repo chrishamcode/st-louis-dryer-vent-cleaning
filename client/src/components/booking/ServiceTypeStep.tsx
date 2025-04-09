@@ -18,22 +18,22 @@ const serviceTypes = [
   {
     id: "standard",
     title: "Standard Cleaning",
-    description: "Thorough cleaning of your dryer vent system",
-    price: "$89",
+    description: "Thorough cleaning of your dryer vent system - Opening Special!",
+    price: "$99",
     icon: Wrench,
   },
   {
     id: "express",
     title: "Express Service",
     description: "Same-day service with priority scheduling",
-    price: "$129",
+    price: "$139",
     icon: Timer,
   },
   {
     id: "premium",
     title: "Premium Service",
     description: "Deep cleaning with video inspection",
-    price: "$159",
+    price: "$169",
     icon: Shield,
   },
 ];
@@ -97,11 +97,23 @@ export default function ServiceTypeStep({
                       >
                         <service.icon className="h-6 w-6 shrink-0 text-primary" />
                         <div className="space-y-1">
-                          <p className="font-medium leading-none">{service.title}</p>
+                          <div className="flex items-center">
+                            <p className="font-medium leading-none">{service.title}</p>
+                            {service.id === 'standard' && (
+                              <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                SPECIAL
+                              </span>
+                            )}
+                          </div>
                           <p className="text-sm text-gray-500">
                             {service.description}
                           </p>
-                          <p className="font-medium text-primary">{service.price}</p>
+                          <div className="flex items-center">
+                            <p className="font-medium text-primary">{service.price}</p>
+                            {service.id === 'standard' && (
+                              <span className="ml-2 text-xs text-gray-500 line-through">$125</span>
+                            )}
+                          </div>
                         </div>
                       </FormLabel>
                     </FormItem>
