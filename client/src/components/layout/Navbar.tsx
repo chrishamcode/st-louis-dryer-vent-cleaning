@@ -5,6 +5,7 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import "./MobileMenu.css";
 
@@ -85,7 +86,7 @@ export default function Navbar() {
             modal={false}
           >
             <DialogContent 
-              className="mobile-menu fixed inset-y-0 right-0 h-full w-[80vw] max-w-[280px] 
+              className="mobile-menu fixed inset-y-0 right-0 h-full w-[95vw] max-w-[320px] 
                         rounded-l-2xl p-0 shadow-xl bg-white 
                         data-[state=open]:animate-slide-in-right
                         data-[state=closed]:animate-slide-out-right
@@ -100,6 +101,9 @@ export default function Navbar() {
               onPointerDownOutside={() => setMobileMenuOpen(false)}
             >
               <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
+              <DialogDescription className="sr-only">
+                Navigate to different sections of the website
+              </DialogDescription>
               <div className="flex items-center justify-between p-4 border-b">
                 <Link href="/" onClick={handleMobileNavClick} className="text-lg font-bold text-primary">
                   St. Louis
