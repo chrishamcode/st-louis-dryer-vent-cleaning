@@ -12,29 +12,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent } from "@/components/ui/card";
-import { Wrench, Timer, Shield } from "lucide-react";
+import { Wrench, CheckCircle, Zap } from "lucide-react";
 
 const serviceTypes = [
   {
     id: "standard",
-    title: "Standard Cleaning",
-    description: "Thorough cleaning of your dryer vent system - Opening Special!",
+    title: "Professional Dryer Vent Cleaning",
+    description: "Complete cleaning of your entire dryer vent system with inspection - Opening Special!",
     price: "$99",
-    icon: Wrench,
-  },
-  {
-    id: "express",
-    title: "Express Service",
-    description: "Same-day service with priority scheduling",
-    price: "$139",
-    icon: Timer,
-  },
-  {
-    id: "premium",
-    title: "Premium Service",
-    description: "Deep cleaning with video inspection",
-    price: "$169",
-    icon: Shield,
+    icon: CheckCircle,
   },
 ];
 
@@ -56,7 +42,7 @@ export default function ServiceTypeStep({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      serviceType: data.serviceType || "",
+      serviceType: data.serviceType || "standard",
     },
   });
 
@@ -74,7 +60,7 @@ export default function ServiceTypeStep({
           render={({ field }) => (
             <FormItem className="space-y-3">
               <FormLabel className="text-lg font-semibold">
-                Select Your Service Type
+                Dryer Vent Cleaning Service
               </FormLabel>
               <FormControl>
                 <RadioGroup

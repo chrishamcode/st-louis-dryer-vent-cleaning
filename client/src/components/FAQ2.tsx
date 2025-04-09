@@ -23,7 +23,7 @@ export default function FAQ2() {
         "name": "How much does dryer vent cleaning cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our standard dryer vent cleaning service starts at $99 as an opening special (regular price $125). This includes a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment. Factors that may affect pricing include vent length, accessibility, and the level of lint buildup. We also offer express service options for same-day scheduling and premium packages that include video inspection. All our services come with transparent pricing and no hidden fees."
+          "text": "Our professional dryer vent cleaning service is priced at $99 as a limited-time opening special (regular price $125). This all-inclusive service covers a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment. Our flat-rate pricing makes it simple and transparent to keep your home safe. The $99 special pricing is available for a limited time for both residential and commercial properties."
         }
       },
       {
@@ -164,35 +164,35 @@ export default function FAQ2() {
                   </div>
                   
                   <p className="mb-4">
-                    Our standard dryer vent cleaning service starts at $99 as a limited-time opening special (regular price $125).
-                    This includes a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment.
+                    Our professional dryer vent cleaning service is priced at $99 as a limited-time opening special (regular price $125).
+                    This all-inclusive service covers a thorough cleaning of your entire dryer vent system from the dryer to the exterior vent, using professional equipment.
                   </p>
                   
                   <div className="bg-white p-4 rounded-lg border border-gray-200 mb-4">
-                    <h4 className="text-base font-medium text-gray-900 mb-2">Factors that may affect pricing:</h4>
+                    <h4 className="text-base font-medium text-gray-900 mb-2">What's included in our service:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                       <li className="flex items-center">
                         <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
-                        Vent length and complexity
+                        Complete vent system cleaning
                       </li>
                       <li className="flex items-center">
                         <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
-                        Accessibility of vents
+                        Professional equipment
                       </li>
                       <li className="flex items-center">
                         <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
-                        Level of lint buildup
+                        Thorough inspection
                       </li>
                       <li className="flex items-center">
                         <span className="h-2 w-2 bg-primary rounded-full mr-2"></span>
-                        Additional services requested
+                        No hidden fees
                       </li>
                     </ul>
                   </div>
                   
                   <p>
-                    We also offer express service options for same-day scheduling and premium packages that include video inspection.
-                    All our services come with transparent pricing and no hidden fees.
+                    Our flat-rate pricing makes it simple and transparent to keep your home safe.
+                    The $99 special pricing is available for a limited time for both residential and commercial properties.
                   </p>
                 </div>
               </div>
