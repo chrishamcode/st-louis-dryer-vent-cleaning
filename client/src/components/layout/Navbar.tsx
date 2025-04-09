@@ -1,15 +1,16 @@
 import { Link } from "wouter";
-import { Phone, Calendar, Menu, MapPin, Home, MessageSquare } from "lucide-react";
+import { Phone, Calendar, Menu, MapPin, Home, MessageSquare, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import "./MobileMenu.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -25,28 +26,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Add a direct style override for mobile menu
-  useEffect(() => {
-    // Apply hard-coded styles directly to ensure they are applied
-    const style = document.createElement('style');
-    style.textContent = `
-      [data-state="open"] {
-        width: 40% !important;
-        max-width: 150px !important;
-      }
-      
-      @media (min-width: 640px) {
-        [data-state="open"] {
-          max-width: 250px !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
+  // Close mobile menu when clicking on a link (improves UX)
+  const handleMobileNavClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <nav 
@@ -70,60 +53,93 @@ export default function Navbar() {
         </Link>
 
         {/* Mobile menu */}
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <button 
-              className={`mobile-menu-button ${
-                scrolled 
-                  ? 'text-gray-700 hover:bg-gray-100' 
-                  : 'text-white hover:bg-white/10'
-              }`}
-              aria-label="Open menu"
+        <div className="md:hidden">
+          <button 
+            onClick={() => setMobileMenuOpen(true)}
+            className={`p-3 rounded-md ${
+              scrolled 
+                ? 'text-gray-700 hover:bg-gray-100' 
+                : 'text-white hover:bg-white/10'
+            }`}
+            aria-label="Open menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+          
+          <Dialog open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <DialogContent 
+              className="mobile-menu fixed inset-y-0 right-0 h-full w-[80vw] max-w-[280px] 
+                        rounded-l-2xl p-0 shadow-xl bg-white 
+                        data-[state=open]:animate-slide-in-right
+                        data-[state=closed]:animate-slide-out-right
+                        flex flex-col"
+              aria-label="Mobile navigation menu"
+              id="mobile-menu"
             >
-              <Menu className="h-6 w-6" />
-            </button>
-          </SheetTrigger>
-          <SheetContent side="right" className="mobile-menu-sheet">
-            <div>
-              <Link href="/" className="mobile-menu-title text-primary">
-                St. Louis
-              </Link>
-            </div>
-            
-            <nav className="mobile-menu-nav">
-              <Link href="/" className="mobile-menu-link text-gray-700 hover:text-primary">
-                <Home />
-                <span className="font-medium">Home</span>
-              </Link>
-              <Link href="/service-areas" className="mobile-menu-link text-gray-700 hover:text-primary">
-                <MapPin />
-                <span className="font-medium">Areas</span>
-              </Link>
-              <Link href="/contact" className="mobile-menu-link text-gray-700 hover:text-primary">
-                <MessageSquare />
-                <span className="font-medium">Contact</span>
-              </Link>
+              <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
+              <div className="flex items-center justify-between p-4 border-b">
+                <Link href="/" onClick={handleMobileNavClick} className="text-lg font-bold text-primary">
+                  St. Louis
+                </Link>
+                <button 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-full hover:bg-gray-100 text-gray-500"
+                  aria-label="Close menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
               
-              <div className="mobile-menu-divider"></div>
-              
-              <a 
-                href="tel:+13146326526" 
-                className="mobile-menu-link text-primary font-medium"
-              >
-                <Phone />
-                <span>Call Us</span>
-              </a>
-              
-              <Link 
-                href="#contact-cta" 
-                className="mobile-menu-cta bg-primary text-white"
-              >
-                <Calendar />
-                <span>Book Now</span>
-              </Link>
-            </nav>
-          </SheetContent>
-        </Sheet>
+              <nav className="flex flex-col p-4 space-y-4">
+                <Link 
+                  href="/" 
+                  onClick={handleMobileNavClick}
+                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+                >
+                  <Home className="h-5 w-5 mr-3" />
+                  <span className="font-medium">Home</span>
+                </Link>
+                <Link 
+                  href="/service-areas" 
+                  onClick={handleMobileNavClick}
+                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+                >
+                  <MapPin className="h-5 w-5 mr-3" />
+                  <span className="font-medium">Service Areas</span>
+                </Link>
+                <Link 
+                  href="/contact" 
+                  onClick={handleMobileNavClick}
+                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+                >
+                  <MessageSquare className="h-5 w-5 mr-3" />
+                  <span className="font-medium">Contact</span>
+                </Link>
+                
+                <div className="my-2 border-t"></div>
+                
+                <a 
+                  href="tel:+13146326526" 
+                  className="flex items-center py-3 px-4 rounded-lg text-primary font-medium hover:bg-primary/10 active:bg-primary/20"
+                >
+                  <Phone className="h-5 w-5 mr-3" />
+                  <span>(314) 632-6526</span>
+                </a>
+                
+                <Link 
+                  href="#contact-cta" 
+                  onClick={handleMobileNavClick}
+                  className="flex items-center justify-center py-3 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 active:bg-primary/80"
+                >
+                  <Calendar className="h-5 w-5 mr-3" />
+                  <span>Book Now</span>
+                </Link>
+              </nav>
+            </DialogContent>
+          </Dialog>
+        </div>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center">

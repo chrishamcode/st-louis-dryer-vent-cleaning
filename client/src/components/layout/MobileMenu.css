@@ -1,83 +1,75 @@
-/* Custom mobile menu styles for Android optimization with !important tags to ensure styles are applied */
-/* Direct targeting with full specificity for every element */
-[data-state="open"] .mobile-menu-sheet {
-  width: 40% !important;
-  max-width: 150px !important;
-}
-
-@media (min-width: 640px) {
-  [data-state="open"] .mobile-menu-sheet {
-    max-width: 250px !important;
+/* Custom animations for the mobile menu */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
-/* Override the base SheetContent styles */
-[role="dialog"] [data-state="open"] {
-  width: 40% !important;
-  max-width: 150px !important;
-}
-
-@media (min-width: 640px) {
-  [role="dialog"] [data-state="open"] {
-    max-width: 250px !important;
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 
-/* Extreme override for all sheet content */
-[role="dialog"] > div:last-child {
-  width: 40% !important;
-  max-width: 150px !important;
+/* Apply animations to dialog content */
+.data-[state=open]:animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out forwards;
 }
 
-/* Direct inline style override */
-button.mobile-menu-button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0.5rem !important;
-  border-radius: 0.375rem !important;
+.data-[state=closed]:animate-slide-out-right {
+  animation: slide-out-right 0.3s ease-in forwards;
 }
 
-a.mobile-menu-title {
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  margin-bottom: 0.25rem !important;
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
-  display: block !important;
+/* Make sure tap targets are large enough for mobile devices */
+.mobile-menu button,
+.mobile-menu a {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
 }
 
-nav.mobile-menu-nav {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.5rem !important;
+/* Android-specific optimizations */
+@media (pointer: coarse) {
+  /* Ensure buttons have enough spacing */
+  .mobile-menu button,
+  .mobile-menu a {
+    padding: 12px !important;
+    margin: 4px 0 !important;
+  }
+  
+  /* Improve tap targets */
+  .mobile-menu svg {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  
+  /* Optimize touch scrolling */
+  .mobile-menu nav {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
-a.mobile-menu-link, .mobile-menu-link {
-  display: flex !important;
-  align-items: center !important;
-  font-size: 0.75rem !important;
-  transition: color 0.2s ease !important;
+/* Fix for Android focus issues */
+button:focus,
+a:focus {
+  outline: 2px solid rgba(var(--primary-rgb), 0.5);
+  outline-offset: 2px;
 }
 
-a.mobile-menu-link svg, .mobile-menu-link svg {
-  width: 0.75rem !important;
-  height: 0.75rem !important;
-  margin-right: 0.25rem !important;
+/* Prevent content shift when dialog opens */
+body:has(dialog[open]) {
+  overflow: hidden;
 }
 
-.mobile-menu-divider {
-  border-top-width: 1px !important;
-  margin-top: 0.375rem !important;
-  margin-bottom: 0.375rem !important;
-}
-
-a.mobile-menu-cta, .mobile-menu-cta {
-  font-size: 0.75rem !important;
-  padding: 0.25rem 0.5rem !important;
-  margin-top: 0.375rem !important;
-  border-radius: 0.375rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+/* Ensure dialog content is visible even with other z-index elements */
+[role="dialog"] {
+  z-index: 1000 !important;
 }
