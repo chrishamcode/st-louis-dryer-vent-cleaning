@@ -38,7 +38,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className="py-16">
+    <div className="pt-28 pb-16">
       <ContactSEO />
       <Helmet>
         <script type="application/ld+json">

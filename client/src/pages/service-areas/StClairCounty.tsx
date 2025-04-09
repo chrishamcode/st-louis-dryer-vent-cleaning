@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function StClairCounty() {
   return (
-    <div className="py-16">
+    <div className="pt-28 pb-16">
       <Helmet>
         <title>Dryer Vent Cleaning in St. Clair County, IL | Professional Services</title>
         <meta name="description" content="Professional dryer vent cleaning services throughout St. Clair County, Illinois. Serving East St. Louis, Belleville, Fairview Heights, and surrounding areas." />

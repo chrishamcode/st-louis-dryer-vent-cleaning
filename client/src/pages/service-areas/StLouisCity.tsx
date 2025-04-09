@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function StLouisCity() {
   return (
-    <div className="py-16">
+    <div className="pt-28 pb-16">
       <Helmet>
         <title>Dryer Vent Cleaning in St. Louis City | Professional Services</title>
         <meta name="description" content="Professional dryer vent cleaning services throughout St. Louis City. Prevent fire hazards, improve efficiency, and extend the life of your dryer. Serving Downtown, Central West End, Soulard, and all city neighborhoods." />

@@ -115,7 +115,7 @@ export default function ServiceAreas() {
   };
 
   return (
-    <div className="py-16">
+    <div className="pt-28 pb-16">
       <ServiceAreasSEO />
       <div className="container mx-auto px-4">
         <h1 className="mb-8 text-center text-4xl font-bold">Service Areas</h1>
