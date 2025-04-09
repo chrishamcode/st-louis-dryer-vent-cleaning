@@ -1,17 +1,12 @@
 import { Link } from "wouter";
 import { Phone, Calendar, Menu, MapPin, Home, MessageSquare, X } from "lucide-react";
-import { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { useState, useEffect, useRef } from "react";
 import "./MobileMenu.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -27,7 +22,46 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Close mobile menu when clicking on a link and scroll to top
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      // Prevent body scrolling when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+  
+  // Handle escape key to close menu
+  useEffect(() => {
+    const handleEscapeKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileMenuOpen(false);
+      }
+    };
+    
+    if (mobileMenuOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+    }
+    
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [mobileMenuOpen]);
+  
+  // Close mobile menu when clicking a link and scroll to top
   const handleMobileNavClick = () => {
     setMobileMenuOpen(false);
     
@@ -45,7 +79,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled 
           ? 'bg-white shadow-md py-3' 
           : 'bg-black/80 backdrop-blur-sm py-4'
@@ -64,7 +98,7 @@ export default function Navbar() {
           St. Louis Dryer Vent Cleaning
         </Link>
 
-        {/* Mobile menu */}
+        {/* Mobile menu button */}
         <div className="md:hidden">
           <button 
             onClick={() => setMobileMenuOpen(true)}
@@ -80,90 +114,84 @@ export default function Navbar() {
             <Menu className="h-6 w-6" />
           </button>
           
-          <Dialog 
-            open={mobileMenuOpen} 
-            onOpenChange={setMobileMenuOpen}
-            modal={false}
+          {/* Custom mobile menu overlay */}
+          {mobileMenuOpen && (
+            <div 
+              className="fixed inset-0 bg-black/50 z-50"
+              aria-hidden="true"
+            />
+          )}
+          
+          {/* Custom mobile menu - no Dialog component */}
+          <div
+            ref={mobileMenuRef}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
+            className={`fixed inset-y-0 right-0 z-50 w-[90%] max-w-[300px] bg-white shadow-xl
+                      transform transition-transform duration-300 ease-in-out
+                      ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
           >
-            <DialogContent 
-              className="mobile-menu fixed inset-y-0 right-0 h-full w-[95vw] max-w-[320px] 
-                        rounded-l-2xl p-0 shadow-xl bg-white 
-                        data-[state=open]:animate-slide-in-right
-                        data-[state=closed]:animate-slide-out-right
-                        flex flex-col"
-              aria-label="Mobile navigation menu"
-              id="mobile-menu"
-              onOpenAutoFocus={(e) => {
-                // Prevent autofocus behavior that might scroll the page
-                e.preventDefault();
-              }}
-              onEscapeKeyDown={() => setMobileMenuOpen(false)}
-              onPointerDownOutside={() => setMobileMenuOpen(false)}
-            >
-              <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
-              <DialogDescription className="sr-only">
-                Navigate to different sections of the website
-              </DialogDescription>
-              <div className="flex items-center justify-between p-4 border-b">
-                <Link href="/" onClick={handleMobileNavClick} className="text-lg font-bold text-primary">
-                  St. Louis
-                </Link>
-                <button 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-full hover:bg-gray-100 text-gray-500"
-                  aria-label="Close menu"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
+            <div className="flex items-center justify-between p-4 border-b">
+              <Link href="/" onClick={handleMobileNavClick} className="text-lg font-bold text-primary">
+                St. Louis
+              </Link>
+              <button 
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-3 rounded-full hover:bg-gray-100 text-gray-500"
+                aria-label="Close menu"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            
+            <nav className="flex flex-col p-4 space-y-2 overflow-y-auto max-h-[calc(100vh-5rem)]">
+              <Link 
+                href="/" 
+                onClick={handleMobileNavClick}
+                className="flex items-center py-4 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+              >
+                <Home className="h-5 w-5 mr-3" />
+                <span className="font-medium">Home</span>
+              </Link>
+              <Link 
+                href="/service-areas" 
+                onClick={handleMobileNavClick}
+                className="flex items-center py-4 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+              >
+                <MapPin className="h-5 w-5 mr-3" />
+                <span className="font-medium">Service Areas</span>
+              </Link>
+              <Link 
+                href="/contact" 
+                onClick={handleMobileNavClick}
+                className="flex items-center py-4 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
+              >
+                <MessageSquare className="h-5 w-5 mr-3" />
+                <span className="font-medium">Contact</span>
+              </Link>
               
-              <nav className="flex flex-col p-4 space-y-4">
-                <Link 
-                  href="/" 
-                  onClick={handleMobileNavClick}
-                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
-                >
-                  <Home className="h-5 w-5 mr-3" />
-                  <span className="font-medium">Home</span>
-                </Link>
-                <Link 
-                  href="/service-areas" 
-                  onClick={handleMobileNavClick}
-                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
-                >
-                  <MapPin className="h-5 w-5 mr-3" />
-                  <span className="font-medium">Service Areas</span>
-                </Link>
-                <Link 
-                  href="/contact" 
-                  onClick={handleMobileNavClick}
-                  className="flex items-center py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary active:bg-gray-200"
-                >
-                  <MessageSquare className="h-5 w-5 mr-3" />
-                  <span className="font-medium">Contact</span>
-                </Link>
-                
-                <div className="my-2 border-t"></div>
-                
-                <a 
-                  href="tel:+13146326526" 
-                  className="flex items-center py-3 px-4 rounded-lg text-primary font-medium hover:bg-primary/10 active:bg-primary/20"
-                >
-                  <Phone className="h-5 w-5 mr-3" />
-                  <span>(314) 632-6526</span>
-                </a>
-                
-                <Link 
-                  href="#contact-cta" 
-                  onClick={handleMobileNavClick}
-                  className="flex items-center justify-center py-3 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 active:bg-primary/80"
-                >
-                  <Calendar className="h-5 w-5 mr-3" />
-                  <span>Book Now</span>
-                </Link>
-              </nav>
-            </DialogContent>
-          </Dialog>
+              <div className="my-3 border-t"></div>
+              
+              <a 
+                href="tel:+13146326526" 
+                className="flex items-center py-4 px-4 rounded-lg text-primary font-medium hover:bg-primary/10 active:bg-primary/20"
+              >
+                <Phone className="h-5 w-5 mr-3" />
+                <span>(314) 632-6526</span>
+              </a>
+              
+              <Link 
+                href="#contact-cta" 
+                onClick={handleMobileNavClick}
+                className="flex items-center justify-center py-4 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 active:bg-primary/80"
+              >
+                <Calendar className="h-5 w-5 mr-3" />
+                <span>Book Now</span>
+              </Link>
+            </nav>
+          </div>
         </div>
 
         {/* Desktop menu */}
