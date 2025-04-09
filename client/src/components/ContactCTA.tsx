@@ -12,7 +12,7 @@ import { Link } from "wouter";
 
 export default function ContactCTA() {
   return (
-    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+    <div id="contact-cta" className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
       {/* Header */}
       <div className="bg-gradient-to-r from-primary to-primary-dark p-8 text-center">
         <h2 className="text-white text-3xl font-bold mb-3">Schedule Your Cleaning</h2>
@@ -59,13 +59,13 @@ export default function ContactCTA() {
               <p className="mt-2 text-gray-600">Schedule service at your convenience</p>
             </div>
             
-            <a 
-              href="/book-service"
+            <Link 
+              href="/book"
               className="inline-flex w-full py-6 text-base mt-4 font-medium transition-all duration-300 items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white rounded-md"
             >
               <Calendar className="h-5 w-5" />
               Schedule Appointment
-            </a>
+            </Link>
             
             <div className="mt-5 flex items-center justify-center gap-2 text-sm text-gray-500">
               <CheckCircle2 className="h-4 w-4" />
