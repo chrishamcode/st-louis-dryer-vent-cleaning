@@ -182,14 +182,25 @@ export default function Navbar() {
                 <span>(314) 632-6526</span>
               </a>
               
-              <Link 
+              <a 
                 href="#contact-cta" 
-                onClick={handleMobileNavClick}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  
+                  // Wait a moment for the menu to close
+                  setTimeout(() => {
+                    // Find the contact-cta element and scroll to it
+                    const contactCta = document.getElementById('contact-cta');
+                    if (contactCta) {
+                      contactCta.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
                 className="flex items-center justify-center py-4 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 active:bg-primary/80"
               >
                 <Calendar className="h-5 w-5 mr-3" />
                 <span>Book Now</span>
-              </Link>
+              </a>
             </nav>
           </div>
         </div>
@@ -242,10 +253,20 @@ export default function Navbar() {
               (314) 632-6526
             </a>
             
-            <Link href="#contact-cta" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center">
+            <a 
+              href="#contact-cta" 
+              onClick={(e) => {
+                e.preventDefault();
+                const contactCta = document.getElementById('contact-cta');
+                if (contactCta) {
+                  contactCta.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center"
+            >
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Service
-            </Link>
+            </a>
           </div>
         </div>
       </div>
